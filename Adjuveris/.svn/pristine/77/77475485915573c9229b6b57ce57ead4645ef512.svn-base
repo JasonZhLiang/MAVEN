@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<wicket:head>
+<script src="LCFixedSizer.js"></script>
+</wicket:head>
+<body>
+<wicket:extend>
+	<h1>Institution Preferences</h1>
+	<form wicket:id="instpreff" id="instpreff">
+		<label>Number of prior terms visible to students </label><select wicket:id="studrange"id="studrange" ></select> <br>
+		<label>Default number of prior terms visible to inst admins </label><select wicket:id="iarange"id="iarange" ></select><br>
+		<br>
+		<input type="submit" class="subbutton" value="Update Preferences"/><br>
+	</form>
+</wicket:extend>
+</body>
+</html>

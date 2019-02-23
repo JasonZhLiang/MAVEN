@@ -1,0 +1,9 @@
+oaclientsshdr=Clients
+selectl=Select
+selectfroml=Select - from Year
+monthl=Month
+toyearl=to Year
+oaclientshelp1=- select <b>'+'</b> next to client name to display client list
+oaclientshelp2=- select <b>'+'</b> next to client name to display assignment list
+oaclientshelp3=- select <b>'user name'</b> to edit user details 
+oaclientshelp4=- select <b>'client name'</b> to assign a client   

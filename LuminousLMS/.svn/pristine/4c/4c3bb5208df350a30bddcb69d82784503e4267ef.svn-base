@@ -1,0 +1,5 @@
+consultantclientshdr=Les clients
+consultantclientshelp1=- sélectionner <b>'+'</b> à côté du nom du client pour afficher la liste d'assignation
+consultantclientshelp2=- sélectionner <b>'+'</b> à côté d'un nom d'affectation pour afficher les segments d'affectation
+consultantclientshelp3=- sélectionner <b>'+'</b> à côté d'un segment d'affectation pour afficher les enregistrements d'utilisation
+consultantclientshelp4=- sélectionner <b>'client prénom'</b> pour modifier la liste d'affectation pour le client

@@ -1,0 +1,14 @@
+createl=Create/Send Message
+subjectl=Subject:
+messagel=Message:
+emaill=To Client Email:
+sendb=Send
+createmessagecll=Select Client:
+createmessageconl=Consultant:
+nullValid=Choose one
+charlimitl=characters maximum
+clientsdd.Required=A client or consultant must be selected.
+subjecttf.Required=The subject line must contain a topic.
+messageta.Required=The message must not be empty.
+messagesent=The message has been sent.
+exceptionerr=An unexpected error occurred.

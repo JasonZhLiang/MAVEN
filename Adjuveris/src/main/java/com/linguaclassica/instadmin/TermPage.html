@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd"
+	lang="en">
+<wicket:head>
+<script src="LCFixedSizer.js"></script>
+<script src="jQuery.js"></script>
+<script src="DatetimePicker.js"></script>
+<script src="jquery-ui.js"></script>
+<script src="jquery-ui-timepicker-addon.js"></script>
+<link rel="stylesheet" type="text/css" href="jquery-ui.css" />
+<link rel="stylesheet" type="text/css" href="jquery-ui-timepicker-addon.css" />
+</wicket:head>
+<body>
+<wicket:extend>
+	<h1><span wicket:id="termaction">action</span></h1>
+	<form wicket:id="manualcreateform">
+		<label class="manualcreatel">Term name:</label><input type="text" wicket:id="termnametf" autofocus required /><br/>
+		<label class="manualcreatel">Start date:</label><input wicket:id="starttimefield"  id="startdtpicker"  type="text" required ></input><br/>
+		<label class="manualcreatel">End date:</label><input wicket:id="endtimefield" id="enddtpicker" type="text" required ></input><br/>
+		<input type="submit" class="subbutton" value="Save"/><br/><br/>
+	</form>
+</wicket:extend>
+</body>
+</html>

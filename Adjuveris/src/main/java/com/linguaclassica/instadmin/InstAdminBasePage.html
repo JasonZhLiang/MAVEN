@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+<meta name="description" content="Adjuveris eTutor. A software-as-a-service application designed to support education in classical languages." />
+<meta name="author" content="Eugene Price"/>
+<meta name="copyright" content="Lingua Classica, copyright &#169; 2014-2017. All rights reserved."/>
+<meta name="keywords" content="Latin, Lingua Classica, pronoun, language, learning, reading, eTutor, Adjuveris, 
+self-instruction, education, self-learning, software, parse, construe, grammar, syntax, 'study aid'">
+
+<title>Adjuveris eTutor</title>
+
+<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="site.css" />
+<link rel="shortcut icon" href="alphtransfavicon.ico">
+<script>
+	function starve()
+	{
+		document.getElementById("feedbackmessages").style.visibility = "hidden";
+	}
+</script>
+<wicket:header-items/>
+</head>
+<body>
+	<div id="wrapper">
+		<div id="leftnav">
+			<div wicket:id="feedbackmessages" id="feedbackmessages"></div>
+			<div id="logo"><img src="images/AlpheiosLogoOrig.gif" alt="Adjuveris logo"/></div>
+			<div>
+				<select wicket:id="termPref" id="termPref">
+					<option>1</option>
+					<option>2</option>
+				</select>
+			</div>
+			<div id="userpermit">
+				<span wicket:id="ident">Gussie Fink-Nottle</span><br>
+				Institution Admin
+			</div>
+			<div><a wicket:id="permswap" id="permswap">Switch Permission</a></div>
+			<div id="navmenu">
+				<div wicket:id="navBar" id="navBar"></div>
+			</div>
+			<div id="footer">
+				Copyright &copy; 2014-2017 Lingua Classica<br>
+				All rights reserved<br> 
+				Hosted by <a href="https://www.viviotech.net/" id="viviotechnologies" target="blank">Vivio Technologies</a>.
+			</div>
+		</div>
+		<div id="page">
+			<div class="post" id="main">
+				<wicket:child />
+			</div>
+		</div>
+	</div>
+</body>
+</html>

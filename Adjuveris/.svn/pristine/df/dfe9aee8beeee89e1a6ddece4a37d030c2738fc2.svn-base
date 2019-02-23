@@ -1,0 +1,261 @@
+
+<html>
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<META HTTP-EQUIV="Cache-Control" CONTENT="no-cache">
+
+<meta name="author" content="Eugene Price"/>
+<meta name="copyright" content="Lingua Classica, 2012.  All rights reserved."/>
+<meta name="keywords" content="Latin, Lingua Classica, pronoun, language, learning, reading, 
+self-instruction, education, self-learning,software, parse, construe, grammar, syntax, 'study aid'">
+
+<title>Lingua Classica Latin Pronoun Drill</title>
+
+<script type="text/javascript" src="PronounDrill.js"></script>
+<link rel="stylesheet" type="text/css" href="PronStyle.css" />
+<link href="http://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" type="text/css" /><link rel="shortcut icon"  href="LCfavicon.ico">
+	
+</head>
+
+
+<body onLoad="getParams();">
+
+
+<div id="wrapper">
+	<div id="header">
+		<div id="logo">
+			<img src="../images/logoLC-Red-243x70trans.png"/>
+		</div>
+		<div id="title"><h2>Latin Pronoun Drill</h2></div>
+		<div id="menu">
+			<ul><!-- 
+				<li><a href="./homepage" id="home"> Home</a></li>
+				<li><a href="LinguaClassica-Products.html" id="parsers"> Latin/Greek Parsers</a></li>
+				<li><a href="http://linguaclassicacloud.com/LatinParser" id="cloud">Latin Parser Cloud</a></li>
+				<li><a href="LatinGrammarTable.html" id="grammartables">Latin Grammar Tables</a></li>
+				<li><a href="LinguaClassica-About.html" id="about">About/Policies</a></li>
+				<li><a href="LinguaClassica-Contact.html" id="contact">Contact</a></li>
+				 -->
+			</ul>
+		</div>
+	</div><!-- header -->
+
+
+
+
+<div id="page-drpro">
+
+
+<form id="checkform" name="checkform" method="post" action="#" onsubmit="return validateForm()">
+
+<div id="dr-side">
+
+<br/>
+
+<h3>Latin Pronoun Drill</h3>
+
+<p>
+For the pronoun highlighted below, enter the correct forms, by number, gender and case, into
+the text boxes provided.
+</p>
+
+<select name="selOpts" id="selOpts" size="4" onChange="setVariable();">
+<option>hic,haec,hoc</option>
+<option>idem,eadem,idem</option>
+<option>ille,illa,illud</option>
+<option>ipse,ipsa,ipsum</option>
+<option>is,ea,id</option>
+<option>iste,ista,istud</option>
+<option>qui,quae,quod</option>
+<option>quidam,quaedam,quiddam</option>
+<option>quis,quis,quid</option>
+</select>
+
+<br/>
+<br/>
+Comment:<br/>
+<input type="text" name="comment" size="65"/>
+
+</div><!-- dr-side -->
+
+
+
+<div id="drill">
+<table> <!--b-->
+<tr><th>Singular</th></tr>
+<tr><th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Masculine</th>
+<th>Feminine</th><th>Neuter</th></tr>
+<!--START MASCULINE-->
+<tr><td><table> <!--c-->
+<tr><td>Nominative:</td><td><input type="text" name="answer1" id="nomaM" size="10" autocomplete="off"/></td>
+</tr>
+<tr><td>Genitive:</td><td><input type="text" name="answer2" id="genaM" size="10" autocomplete="off"/></td>
+</tr>
+<tr><td>Accusative:</td><td><input type="text" name="answer3" id="accaM" size="10" autocomplete="off"/></td>
+</tr>
+<tr><td>Dative:</td><td><input type="text" name="answer4" id="dat_aM" size="10" autocomplete="off"/></td>
+</tr>
+<tr><td>Ablative:</td><td><input type="text" name="answer5" id="ablaM" size="10" autocomplete="off"/></td>
+</tr>
+</table> <!--c-->
+
+</td>
+
+
+<td>
+<!-- START FEMININE -->
+<table> <!--e-->
+<tr><td><input type="text" name="answer6" id="nomaF" size="10" autocomplete="off"></td>
+</tr>
+<tr><td><input type="text" name="answer7" id="genaF" size="10" autocomplete="off"></td>
+</tr>
+<tr><td><input type="text" name="answer8" id="accaF" size="10" autocomplete="off"></td>
+</tr>
+<tr><td><input type="text" name="answer9" id="dat_aF" size="10" autocomplete="off"/></td>
+</tr>
+<tr><td><input type="text" name="answer10" id="ablaF" size="10" autocomplete="off"/></td>
+</tr>
+</table> <!--e-->
+
+</td>
+
+<td>
+<!--START NEUTER-->
+<table> <!--g-->
+<tr><td><input type="text" name="answer11" id="nomaN" size="10" autocomplete="off"/></td>
+</tr>
+<tr><td><input type="text" name="answer12" id="genaN" size="10" autocomplete="off"/></td>
+</tr>
+<tr><td><input type="text" name="answer13" id="accaN" size="10" autocomplete="off"/></td>
+</tr>
+<tr><td><input type="text" name="answer14" id="dat_aN" size="10" autocomplete="off"/></td>
+</tr>
+<tr><td><input type="text" name="answer15" id="ablaN" size="10" autocomplete="off"/></td>
+</tr>
+</table> <!--g-->
+</td>
+</tr>
+
+<tr><th>Plural</th></tr>
+
+<tr><td><table> <!--c-->
+<tr><td>Nominative:</td><td><input type="text" name="answer16" id="nomaMP" size="10" autocomplete="off"/></td>
+</tr>
+<tr><td>Genitive:</td><td><input type="text" name="answer17" id="genaMP" size="10" autocomplete="off"/></td>
+</tr>
+<tr><td>Accusative:</td><td><input type="text" name="answer18" id="accaMP" size="10" autocomplete="off"/></td>
+</tr>
+<tr><td>Dative:</td><td><input type="text" name="answer19" id="dat_aMP" size="10" autocomplete="off"/></td>
+</tr>
+<tr><td>Ablative:</td><td><input type="text" name="answer20" id="ablaMP" size="10" autocomplete="off"/></td>
+</tr>
+</table> <!--c-->
+
+</td>
+
+<td>
+<!-- START FEMININE -->
+<table> <!--e-->
+<tr><td><input type="text" name="answer21" id="nomaFP" size="10" autocomplete="off"></td>
+</tr>
+<tr><td><input type="text" name="answer22" id="genaFP" size="10" autocomplete="off"></td>
+</tr>
+<tr><td><input type="text" name="answer23" id="accaFP" size="10" autocomplete="off"></td>
+</tr>
+<tr><td><input type="text" name="answer24" id="dat_aFP" size="10" autocomplete="off"></td>
+</tr>
+<tr><td><input type="text" name="answer25" id="ablaFP" size="10" autocomplete="off"></td>
+</tr>
+</table> <!--e-->
+
+</td>
+
+<td>
+<!--START NEUTER-->
+<table> <!--g-->
+<tr><td><input type="text" name="answer26" id="nomaNP" size="10" autocomplete="off"/></td>
+</tr>
+<tr><td><input type="text" name="answer27" id="genaNP" size="10" autocomplete="off"/></td>
+</tr>
+<tr><td><input type="text" name="answer28" id="accaNP" size="10" autocomplete="off"/></td>
+</tr>
+<tr><td><input type="text" name="answer29" id="dat_aNP" size="10" autocomplete="off"/></td>
+</tr>
+<tr><td><input type="text" name="answer30" id="ablaNP" size="10" autocomplete="off"/></td>
+</tr>
+</table> <!--g-->
+
+</td>
+
+</tr>
+
+
+<tr>
+<td colspan="5" align="center"><input type="button" id="subclear" name="clearbutton" value="Clear" onClick="Clear();"/>
+</td>
+</tr>
+
+</table> <!--b-->
+
+<input type="submit" class="subbutton" id="subbutton" value="Submit" />
+</div><!-- drill -->
+<div class="hidden">
+<input type="text" name="exercisename" id="LCPronounDrill" value="LCPronounDrill"/>
+<input type="text" name="exerciseid" id="exerciseid"/>
+<input type="text" name="variable1" id="variable1"/>
+<input type="text" name="var1string" id="var1string"/>
+
+<input type="text" name="assignmentstatus" id="assignstatus" value=""/>
+<input type="text" name="assignmentid" id="assignmentid" value="0" />
+<input type="text" name="classid" id="classid" value="0" />
+
+<input type="text" name="question1" id="question1" value="Masculine singular nominative"/>
+<input type="text" name="question2" id="question2" value="Masculine singular genitive"/>
+<input type="text" name="question3" id="question3" value="Masculine singular accusative"/>
+<input type="text" name="question4" id="question4" value="Masculine singular dative"/>
+<input type="text" name="question5" id="question5" value="Masculine singular ablative"/>
+
+<input type="text" name="question6" id="question6" value="Feminine singular nominative"/>
+<input type="text" name="question7" id="question7" value="Feminine singular genitive"/>
+<input type="text" name="question8" id="question8" value="Feminine singular accusative"/>
+<input type="text" name="question9" id="question9" value="Feminine singular dative"/>
+<input type="text" name="question10" id="question10" value="Feminine singular ablative"/>
+
+<input type="text" name="question11" id="question11" value="Neuter singular nominative"/>
+<input type="text" name="question12" id="question12" value="Neuter singular genitive"/>
+<input type="text" name="question13" id="question13" value="Neuter singular accusative"/>
+<input type="text" name="question14" id="question14" value="Neuter singular dative"/>
+<input type="text" name="question15" id="question15" value="Neuter singular ablative"/>
+
+<input type="text" name="question16" id="question16" value="Masculine plural nominative"/>
+<input type="text" name="question17" id="question16" value="Masculine plural genitive"/>
+<input type="text" name="question18" id="question18" value="Masculine plural accusative"/>
+<input type="text" name="question19" id="question19" value="Masculine plural dative"/>
+<input type="text" name="question20" id="question20" value="Masculine plural ablative"/>
+
+<input type="text" name="question21" id="question21" value="Feminine plural nominative"/>
+<input type="text" name="question22" id="question22" value="Feminine plural genitive"/>
+<input type="text" name="question23" id="question23" value="Feminine plural accusative"/>
+<input type="text" name="question24" id="question24" value="Feminine plural dative"/>
+<input type="text" name="question25" id="question25" value="Feminine plural ablative"/>
+
+<input type="text" name="question26" id="question26" value="Neuter plural nominative"/>
+<input type="text" name="question27" id="question27" value="Neuter plural genitive"/>
+<input type="text" name="question28" id="question28" value="Neuter plural accusative"/>
+<input type="text" name="question29" id="question29" value="Neuter plural dative"/>
+<input type="text" name="question30" id="question30" value="Neuter plural ablative"/>
+</div><!-- hidden -->
+
+</form>
+
+</div><!-- page-drpro -->
+
+</div><!-- wrapper -->
+
+<div id="footer">Copyright (c)  2013 Lingua Classica. All rights reserved. </div>
+
+</body>
+</html>

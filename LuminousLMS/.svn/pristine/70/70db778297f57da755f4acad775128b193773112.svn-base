@@ -1,0 +1,10 @@
+homeheader=Welcome to Employment Services
+loginheader=Log In
+lemail=Email address
+lpassword=Password
+lquestion = Security Question
+lanswer = Security Answer
+bsubmit=Log In
+ueex=Please enter a valid email address and password combination.
+servex=An unexpected error occurred. If the problem continues, please contact your system administrator.
+nosalgex=An algorithm error occurred. Please contact your system administrator.

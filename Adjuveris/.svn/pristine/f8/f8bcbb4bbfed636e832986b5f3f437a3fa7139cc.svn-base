@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd"
+	lang="en">
+<wicket:head>
+<script src="LCTableSizer.js"></script>
+</wicket:head>
+<body>
+<wicket:extend>
+	<h1>Academic Terms</h1>
+	<form wicket:id="termlistform">
+		<table class="termslist">
+			<thead>
+				<tr>
+					<th class="laterm">Term name</th>
+					<th class="ladate">Start date</th>
+					<th class="ladate">End date</th>
+					<th class="ladate" style="white-space: nowrap">Last modified</th>
+					<th></th>
+					<th></th>
+				</tr>
+			</thead>
+		</table>
+		<div class="maxxet">
+			<table class="termslist">
+				<tbody>
+					<tr wicket:id="termitem">
+						<td wicket:id="termnameLab" class="laterm">text here</td>
+						<td wicket:id="startdateLab" class="ladate">text here</td>
+						<td wicket:id="enddateLab" class="ladate">text here</td>
+						<td wicket:id="updatedatelab" class="ladate">text here</td>
+						<td class="ebutton"><input type="submit" wicket:id="edittermlink" value="Edit" /></td>
+						<td class="ebutton"><input type="submit" wicket:id="deletetermlink" value="Delete" /></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</form>
+</wicket:extend>
+</body>
+</html>

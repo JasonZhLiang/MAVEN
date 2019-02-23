@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd"
+	lang="en">
+<wicket:head>
+<!-- There is more than one table -->
+<script src="LCTableSizer.js"></script>
+</wicket:head>
+<body>
+	<wicket:extend>
+		<div id="paneledge">
+		<!-- <span id="backlink" wicket:id="classesSelected">text here</span>-->
+		<h1>Assignments </h1>
+	
+		<form wicket:id="teacherAssignments">
+			<span wicket:id="classcheckboxes" id="classcheckboxes"class="inline"></span><br>
+				<div class="maxxet">
+					<table id="teacherassignmaintable"> 
+					<tbody>
+						<tr wicket:id="classnameList">
+						    <td>
+							<span wicket:id="classnameLab" class="heading larger">Class name</span>
+							<span class="heading large">Creation date</span>
+							<span class="heading large">Start date</span>
+							<span class="heading large">Due date</span>
+							<span class="heading small">Time Zone</span>
+							<span class="heading large">Status</span>
+							<span class="heading medium">Edit</span>
+							<span class="heading medium">Delete</span>
+							<br>
+							<!--th wicket:id="classnameLab" class="heading larger">Class name</th>
+							<th class="heading large">Creation date</th>
+							<th class="heading large">Start date</th>
+							<th class="heading large">Due date</th>
+							<th class="heading small">Time Zone</th>
+							<th class="heading large">Status</th>
+							<th class="heading medium">Edit</th>
+							<th class="heading medium">Delete</th-->
+						<!-- /tr>
+						<tr>
+						  <td-->
+							<!_-div style="height:200px;overflow-y:scroll;"-->
+							<div class="dataPanel">
+							<table id="teacherassigninnertable">
+							<tr wicket:id="assignList">
+								<td wicket:id="assignLab" class="larger">Assignment</td>
+								<td wicket:id="createddateLab" class="large">creation date</td>
+								<td wicket:id="startdateLab" class="large">start date</td>
+								<td wicket:id="duedateLab" class="large"> due date</td>
+								<td wicket:id="timezoneLab" class="small">timezone</td>
+								<td wicket:id="statusLab" class="large">status</td>
+								<td class="medium"><a href="#" wicket:id="editbutton">
+									<input type="button" value="Edit"/></a>
+								</td>			
+								<td class="medium"><span wicket:id="deletebutton" id="deletebutton">xx</span>
+								<span wicket:id="nodeleteLab">   no delete</span>
+								</td>
+							 </tr>
+							</table>
+							</div>
+						 	 </td>
+							</tr>
+						</tbody>
+					</table>
+				</div>	
+			</form>
+	  	</div>
+	</wicket:extend>
+</body>
+</html>

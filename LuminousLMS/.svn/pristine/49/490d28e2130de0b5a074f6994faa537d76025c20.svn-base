@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<wicket:head>
+<script src="LCTableSizer.js"></script>
+</wicket:head>
+<body>
+	<wicket:extend>
+		<h1><wicket:message key="onemessagehdr">one message</wicket:message></h1>
+		<form wicket:id="messagingf" id="messagingf">
+			<div class="maxxet">
+				<table>
+					<tr>
+						<th><label><wicket:message key="froml"></wicket:message></label></th>
+						<th><label><wicket:message key="subjectl"></wicket:message></label></th>
+						<th><label><wicket:message key="creationDatel"></wicket:message></label></th>
+						<th><label><wicket:message key="messagel"></wicket:message></label></th>
+					</tr>
+					<tr>
+						<td wicket:id="fromfld" id="fromfld"></td>
+						<td wicket:id="subjectfld" id="subjectfld"></td>
+						<td wicket:id="creationDatefld" id="creationDatefld"></td>
+						<td wicket:id="messagefld" id="messagefld"></td>
+					</tr>
+				</table>
+			</div>
+		</form>
+	</wicket:extend>
+</body>
+</html>

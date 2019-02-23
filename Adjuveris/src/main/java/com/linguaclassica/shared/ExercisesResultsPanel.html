@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd"
+	lang="en">
+<wicket:head>
+<script src="LCTableSizer.js"></script>
+<style>
+// TODO: Internal Styles need to be moved to site style sheet
+#completedAssignments {
+    border: 1px solid black;
+}
+table, tr, th, td {
+	border: 1px solid black;
+	border-collapse: collapse;
+	padding-left: 10px;
+	padding-right: 10px;
+	text-align: left;
+}
+
+th.thassignment, td.tdassignment
+{
+        width: 170px;
+        padding-right: 1em;
+        text-align: left;
+        white-space: nowrap;
+}
+th.thscore, td.tdscore
+{
+        width: 60px;
+        padding-right: 1em;
+        text-align: left;
+        white-space: nowrap;
+}
+th.thcorrect, td.tdcorrect
+{
+        width: 80px;
+        padding-right: 1em;
+        text-align: left;
+        white-space: nowrap;
+}
+th.thstand, td.tdstand
+{
+        width: 100px;
+        padding-right: 1em;
+        text-align: left;
+        white-space: nowrap;
+}
+th.thassignment, th.thstand, th.thcorrect, th.thscore, th.thdate {
+	background-color: lightslategray;
+}
+</style>
+</wicket:head>
+<body>
+	<wicket:panel>
+		<h2>Student:&nbsp;<span wicket:id=studentnamelab id="studentnamelab">name</span> (<span wicket:id="studidlab">student id</span>)</h2>
+		<div wicket:id="noresults" id="noresults">
+			<br/><br/>
+			<h3>Assignment results have not been calculated.</h3>
+			<p>Either you have not submitted any assignments or the assignment due dates have not yet passed.  If you
+			believe this to be in error, please contact the administrator of this application at your institution.</p>
+		</div>
+		<div wicket:id="completedAssignments" id="completedAssignments" class="maxxet">
+			<table id="completedAssignmentsTable">
+				<tr wicket:id="classList">
+					<td><span wicket:id="classnameLab">text</span></td>
+					<td>		
+						<table>
+						<tr>
+							<th class="thassignment">Exercise</th>
+							<th class="ladatet thdate">Due date</th>
+							<th class="thscore">Score</th>
+							<th class="thcorrect">% Correct</th>
+							<th class="thstand">Standardized?</th>
+						</tr>
+						</table>
+						<table id="completedAssignmentsInnerTable">
+							<tr wicket:id="assignmentList" id="assignmentList">
+								<td wicket:id="assignname" id="assignname" class="tdassignment">assignment</td>
+								<td wicket:id="datelab" id="datelab" class="ladatet">date</td>
+								<td wicket:id="ratiolab" id="ratiolab" class="tdscore">ratio</td>
+								<td wicket:id="percentlab" id="percentlab" class="tdcorrect">percent</td>
+								<td wicket:id="standardlab" id="standardlab" class="tdstand">standardized</td>
+								<td><a href="#" wicket:id="chooseAssign" id="chooseAssign">
+									<input type="button" id="subresults" value="Show detailed results"/></a>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>					
+			</table>
+		</div>
+	</wicket:panel>
+</body>
+</html>

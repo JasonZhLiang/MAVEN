@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd"
+	lang="en">
+<wicket:head>
+<script src="LCTableSizer.js"></script>
+</wicket:head>
+<body>
+<wicket:extend>
+<h1>Exercises</h1>
+	<form wicket:id="exeravailform">
+		<div id="preparedExercisesExcerPage">
+			<h3>Exercise categories:  </h3>
+			<div class="maxxet">
+				<table>
+				<thead>
+				<tr>
+				<th>Exercise name</th>
+				<th>Variable 1</th>
+				<th>Variable 2</th>
+				
+				</tr>
+				</thead>
+				<tbody>
+				<tr><td><h3>Practice exercises:</h3></td></tr>
+				<tr wicket:id="practiceList">
+				<td wicket:id="exercatlab">exer category</td>
+				<td><select  wicket:id="var1DDC" ></select></td>
+				<td><select  wicket:id="var2DDC" ></select></td>
+				<td><a href="#" wicket:id="exerlink">
+					<input type="button" value="View exercise"/>
+				</a></td>
+				</tr>
+				<tr><td><h3>Private exercises:</h3></td></tr>
+				<tr wicket:id="privateList">
+				<td wicket:id="exercatlab">exer category</td>
+				<td><select  wicket:id="var1DDC" ></select></td>
+				<td><select  wicket:id="var2DDC" ></select></td>
+				<td><a href="#" wicket:id="exerlink">
+					<input type="button" value="View exercise"/>
+				</a></td>
+				</tr>
+				<tr><td><h3>Shared exercises:</h3></td></tr>
+				<tr wicket:id="sharedList">
+				<td wicket:id="exercatlab">exer category</td>
+				<td><select  wicket:id="var1DDC" ></select></td>
+				<td><select  wicket:id="var2DDC" ></select></td>
+				<td><a href="#" wicket:id="exerlink">
+					<input type="button" value="View exercise"/>
+				</a></td>
+				<td><a href="#" wicket:id="copybutton"><input type="button" value="Duplicate exercise"/></a></td>
+				</tr>
+				</tbody>
+				</table>
+			</div>		
+		</div>
+		<!--  
+		<div id="practiceResults">
+		Practice exercise results
+		<table>
+			<thead>
+			<tr>
+			<th>Exercise name</th>
+			<th>Variable 1</th>	
+			<th>Variable 2</th>	
+			<th>Date</th>
+			<th>Percent correct</th>
+			<th>Details</th>	
+			</tr>
+			</thead>
+			<tbody>
+			<tr  wicket:id="resultsLV" id="resultsLV">
+			<td wicket:id="exername" id="exername">exer name</td>
+			<td wicket:id="var1lab"></td>
+			<td wicket:id="var2lab"></td>
+			<td wicket:id="datelab" id="datelab"></td>
+			<td wicket:id="ratiolab" id="ratiolab"></td>
+			<td wicket:id="percentlab" id="percentlab"></td>			
+			<td><a href="#" wicket:id="chooseAssign" id="chooseAssign">
+				<input type="button" id="subresults" value="Show detailed results"/>
+				</a>
+			</td>
+			</tr>
+			</tbody>
+			</table>	
+		</div>
+		-->
+		<!-- Following is needed to reload page when back button is clicked from exercise page -->
+		<!-- <input type="hidden" id="refreshed" value="no">
+		<script type="text/javascript">
+		onload=function(){
+			var e=document.getElementById("refreshed");
+			if(e.value=="no")e.value="yes";
+			else{e.value="no";location.reload();}
+			}
+		</script>-->
+	</form>	
+	</wicket:extend>
+</body>
+</html>

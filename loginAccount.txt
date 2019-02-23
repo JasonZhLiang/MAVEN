@@ -1,0 +1,7 @@
+permission level  	email
+
+client			nb@100.com
+consultant		consultant@100.com
+office admin		offadmin@100.com
+
+password:  aaaaaa

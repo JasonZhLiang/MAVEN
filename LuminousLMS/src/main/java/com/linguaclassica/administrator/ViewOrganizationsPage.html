@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<wicket:head>
+<script src="LCTableSizer.js"></script>
+</wicket:head>
+<body>
+	<wicket:extend>
+		<h1>Organizations</h1>
+		<form wicket:id="organsf" id="organsf">
+			There are <label wicket:id="numorgans"></label> organizations in the database.<br>
+			<div class="maxxet">
+				<table>
+					<tr>
+						<th>Organization Name</th>
+						<th>Email Address</th>
+					</tr>
+					<tr wicket:id="organv">
+						<td wicket:id="organame">organization name</td>
+						<td wicket:id="organemail">email address</td>
+					</tr>
+				</table>
+			</div>
+		</form>
+	</wicket:extend>
+</body>
+</html>

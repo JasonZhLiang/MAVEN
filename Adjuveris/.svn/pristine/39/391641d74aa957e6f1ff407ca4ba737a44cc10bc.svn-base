@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<wicket:head>
+<!-- There is a table and form validation required -->
+<!-- <script src="LCTableSizer.js"></script> -->
+</wicket:head> 
+<body>
+<wicket:extend>
+	<div wicket:id="feedbackmessages" id="feedbackmessages"></div>
+	<div id="Create Assignment">
+		<h1> Create Assignment </h1>
+		<form wicket:id="createassignform" onsubmit="return validateForm(this)" method="post">
+			<span id="assiglabel">Assignment Name:&nbsp;&nbsp;</span>
+			<input type="text" class="asmntname" wicket:id="assignmenttext" required maxlength="65" />
+			<br>   				
+			Select classes/groups:&nbsp;&nbsp;
+			<span wicket:id="classcheckboxes" id="classcheckboxes" class="inline"></span>&nbsp;&nbsp;<br/>			
+			<br>
+			Start date:&nbsp;&nbsp;<input wicket:id="starttimefield" id="startdatepicker" type="text"></input>&nbsp;&nbsp;
+			End date:&nbsp;&nbsp;<input wicket:id="endtimefield" id="enddatepicker" type="text"></input>
+			<br>
+			<br>
+			
+			Collaborative:&nbsp;&nbsp;
+			<span wicket:id="CollaborativeGroup">
+			<label><input wicket:id="CollaborativeYes" id="CollaborativeYes" type ="radio" name="collaborative" required>Yes</label>
+			<label><input wicket:id="CollaborativeNo" type ="radio" name="collaborative">No</label>
+			</span>
+			 
+			<br>
+			Exercise Selected:&nbsp;&nbsp;
+			<label wicket:id=exeridtext></label>
+			<br>
+			<div id="practiceExercisesAssignPage">
+				<h3>Exercise categories:  </h3>
+				<!--<div class="exerciseCategories">-->
+				<!-- <div class="maxxet"> -->
+					<table>
+					<thead>
+					<tr>
+					<th>Exercise name</th>
+					<th>Variables</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr wicket:id="categoriesList">
+					<td wicket:id="exercatlab">exer category</td>
+					<td><select  wicket:id="var1DDC" ></select></td>
+					<td><select  wicket:id="var2DDC" ></select></td>
+					<td>
+					<input wicket:id="selectExer" type="button" value="Select exercise"></input>
+					</td>
+					</tr>
+					</tbody>
+					</table>
+			<!-- </div> -->
+			</div>
+			<br>
+			<br>
+			<input wicket:id="CreateAssignment" type="submit" class="subbutton" value="Create Assignment"/><br/>
+		</form>	
+	</div>
+</wicket:extend>
+</body>
+</html>

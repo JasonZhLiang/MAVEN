@@ -1,0 +1,7 @@
+firstnametf.NameValidator=First name contains invalid letters or length.
+lastnametf.NameValidator=Last name contains invalid letters or length.
+firstnametf.Required=Firstname is required.
+lastnametf.Required=Last name is required.
+emailaddresstf.Required=Email address is required.
+emailaddresstf.StringValidator.maximum=The email address has too many characters.
+usernumbertf.StringValidator.maximum=The user number has too many characters.

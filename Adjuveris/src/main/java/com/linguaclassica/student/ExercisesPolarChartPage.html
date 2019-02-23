@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd"
+	lang="en">
+<wicket:head>
+<script src="LCTableSizer.js"></script>
+<style>
+/* TODO: Internal Styles need to be possibly renamed and moved to external style sheet */
+#maincharts {
+    height: 422px;
+    /* overflow-y: scroll; */
+}
+#assignmentsTable {
+    height: 253px;
+    overflow-y: scroll;
+}
+table, tr, th, td {
+	border: 1px solid black;
+	border-collapse: collapse;
+	padding-left: 10px;
+	padding-right: 10px;
+	text-align: left;
+}
+thead, tbody { 
+	/* display: block; */ 
+}
+thead {
+	background-color: lightslategray;
+}
+
+tbody {
+    height: 246px;       /* Just for the demo          */
+    overflow-y: auto;    /* Trigger vertical scroll    */
+    overflow-x: hidden;  /* Hide the horizontal scroll */
+}
+
+#h1PageHeading {
+	padding-bottom: 20px;
+}
+</style>
+</wicket:head>
+<body>
+	<wicket:extend>
+	<div id="maincharts">
+		<h1 id="h1PageHeading">Proficiencies</h1>
+		<div id="studgraphex" style="text-align: center">
+		
+		<div id="labeldiv">		
+			<span wicket:id="proficiencylabel" id="proficiencylabel">text here</span>	
+		</div>			
+			<span class="windrose"><img class="windrose" wicket:id = "windrose"/></span>
+		</div>
+	</div>
+	</wicket:extend>
+</body>
+</html>

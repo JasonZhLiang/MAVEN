@@ -1,0 +1,794 @@
+body {
+	background-color:#e0e0e0;
+}
+
+#wrapper {
+	position:relative;
+	margin-top: 20px;//top:20px;
+	width:1200px;
+	//height:600px;
+	margin-left:auto;
+	margin-right:auto;
+	background-color:white;
+	//border-right:solid 2px gray;
+	//border-bottom:solid 2px gray;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+#leftouter {
+	position:relative;
+	top:0;
+	left:0;	
+	width:300px;
+	height:590px;	
+}
+
+#leftnav
+{
+	position:relative;
+	float: left;
+	top:0;
+	left:0;	
+	width:150px;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+	background-color:#676D89;
+	padding-top:10px;
+	padding-right:10px;
+	padding-bottom: 10px;
+	padding-left:10px;
+	color:white;
+}
+
+#leftnav a {
+	color: yellow; //white;
+	text-decoration:none;
+}
+
+#ident {
+	position: relative; //absolute;
+	//top:70px;
+	//height:30px;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-left:10px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:0.70em;
+	//margin-left:10px;	
+}
+
+#feedbackmessages
+{
+	position:absolute;
+	top:0;
+	left:50px;	
+}
+
+#feedbackmessages ul
+{ 
+    border: 1px solid #CBE5F7; 
+    width: 400px; 
+    margin-top: 15px; 
+    position: absolute; 
+    top: 0px;
+    left: 400px;
+    //padding: 10px 20px;
+	font-family:Arial, Helvetica, sans-serif;
+	color: red;
+    z-index:3;
+	//border-bottom: solid 5px #D0D0D0;-webkit-border-radius:10px;
+	-moz-border-radius: 10px;border-radius:10px;
+	-webkit-padding-start: 0px;
+}
+
+#feedbackmessages ul li
+{ 
+    list-style: none; 
+    background: #D9EBF9 top left repeat-x; 
+    padding: 5px 20px;
+} 
+
+#feedbackmessages ul li .feedbackPanelERROR, #feedbackmessages ul li.feedbackPanelINFO
+{ 
+    display: block; 
+    padding: 6px 20px 6px 20px; 
+} 
+
+#navmenu {
+	position:relative;
+	//top:40px;
+	margin-left:0;
+	padding-left: 10px;
+}
+
+#imgdiv {
+	position:absolute;
+	top:-20px;
+	left:200px;
+	width:750px;
+	height:590px;
+	background-color:white;
+}
+
+ul.menu {
+	list-style-type: none;
+	padding: 0;
+}
+
+li.menu {
+	font-family:"Arial Black", Gadget, sans-serif;
+	font-size:1.00em;
+	padding-bottom:15px;
+	color: purple;
+} 
+
+div.menu li {
+	font-family:"Arial Black", Gadget, sans-serif;
+	font-size:0.70em;
+	color: blue;
+} 
+
+// nav class copied and modified from bootstrap.css
+ul
+{
+	padding: 0;
+}
+
+.nav
+{
+	padding: 0;
+	-webkit-padding-start: 0;
+	margin: 0;
+	border-right: 1px hidden #54879d; 
+	z-index: 20;
+}
+	
+.nav li
+{
+	height: auto;
+	display: block;
+	position: relative;
+	text-align: left;
+	list-style: none;  /* Removes the default styling (bullets) for the list */
+	font-family:"Arial Black", Gadget, sans-serif;
+	font-size:1.00em;
+	padding: 0 0 15px 0;
+	margin: 0;
+}
+            
+.nav a
+{							
+	border-left: 1px hidden #54879d; /* Creates a border in a slightly lighter shade of blue than the background.  Combined with the right border, this creates a nice effect. */
+	border-right: 1px hidden #1f5065; /* Creates a border in a slightly darker shade of blue than the background.  Combined with the left border, this creates a nice effect. */
+	text-decoration: none;  /* Removes the default hyperlink styling. */
+	color: white; /* Text color is white */
+	display: block;
+}
+
+.nav li ul
+{
+	display: none;  /* Hides the drop-down menu */
+	height: auto;									
+	margin: 0; /* Aligns drop-down box underneath the menu item */
+	padding: 1px; /* Aligns drop-down box underneath the menu item */
+}
+
+.nav li:hover ul, .nav li a.dropdown-toggle:focus + ul
+{
+	display: block; /* Displays the drop-down box when the menu item is hovered over */
+	position: absolute;
+	z-index: 22;
+	top: 0.5em;
+	left: 120px;
+	background-color: LightSlateGray;
+	-webkit-border-radius:10px;
+	-moz-border-radius: 10px;
+	border-radius:10px;
+}
+
+.nav li a:hover, .nav li a:focus
+{
+	background-color: LightSlateGray;
+}
+
+.nav li ul li
+{
+	width: 200px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.nav li ul li a
+{
+	border-left: 1px hidden #1f5065; 
+	border-right: 1px hidden #1f5065; 
+	border-top: 1px hidden #74a3b7; 
+	border-bottom: 1px hidden #1f5065; 
+}
+				
+.nav li ul li a:hover	{ background-color: LightSteelBlue; }
+
+.caret
+{
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  vertical-align: middle;
+  border-top: 4px dashed;
+  border-top: 4px solid \9;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+}
+
+#footer {
+	position: relative; //absolute;
+	//top:520px;
+	padding-top: 10px;
+	padding-left:10px;
+	padding-right: 10px;
+	//padding-bottom: 10px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:0.70em;
+	color: white;
+}
+
+#footer a {
+	color:white;
+}
+
+#leftcontent {
+	position:absolute;
+	top:10px;
+	left:180px;
+	width:460px;
+	height:540px;
+	border: solid 1px black;
+	padding:20px;
+}
+
+#rightcontent {
+	position:absolute;
+	top:10px;
+	left:690px;
+	width:460px;
+	height:540px;
+	border: solid 1px black;
+	padding:20px;
+}
+
+#outercontent {
+	margin: 20px 0 0 170px;
+	padding: 10px;
+}
+
+#fullcontent {
+	position:relative; //absolute;
+	//top:10px;
+	//left:180px;
+	width:970px;
+	//height:540px;
+	margin: 0;
+	border: solid 1px black;
+	padding:20px;
+	color:black;
+}
+
+#innercontent {
+	position:relative;
+	top:0;
+	left:0;
+	width:960px;
+	height:540px;
+	padding:20px;
+	color:black;
+	overflow-y:auto;
+}
+
+#OfficeNotifications {
+	position:absolute;
+	top:0;
+	left:600px;
+	width:300px;
+	height:200px;
+	padding:20px;
+	color:black;
+//	border: solid 1px black;
+	overflow-y:auto;
+}
+
+#MessagesFromConsultant {
+	position:absolute;
+	top:250px;
+	left:600px;
+	width:300px;
+	height:200px;
+	padding:20px;
+	color:black;
+//	border: solid 1px black;	
+	overflow-y:auto;
+}
+
+#OfficeAdminInnerContent {
+	position:relative;
+	top:0;
+	left:0;
+	width:960px;
+	height:488px;
+	padding:20px;
+	color:black;
+	overflow-y:auto;
+}
+
+#OfficeAdminNotifications {
+	position:absolute;
+	top:0;
+	left:600px;
+	width:300px;
+	height:488px;
+	padding:20px;
+	color:black;
+	border-left: solid 1px black;
+	overflow-y:auto;
+}
+
+#fullcontent a {
+	color:black;
+}
+
+h1 {
+	font-size: 1.5em;
+	margin: 0 0 0.25em 0;
+}
+
+h2 {
+	font-size: 1.25em;
+	margin: 0 0 0.25em 0;
+}
+
+.hidden {
+	visibility:hidden;
+}
+
+span.title {
+	font-weight:bold;
+	font-size:1.20em;
+}
+
+span.subtitle {
+	font-weight:bold;
+	font-size:1.00em;
+}
+
+span.menuhead {
+	font-family:"Arial Black", Gadget, sans-serif;
+	font-weight:bold;
+	font-size:0.80em;
+	padding-left:20px;
+}
+
+div.maxxet
+{
+	min-height: 210px;
+	overflow-y: scroll;
+	overflow-x: scroll;
+}
+
+td {
+	padding-right:20px;
+}
+
+#page {
+	position:absolute;
+	left:180px;
+	width:960px;
+	border: solid 1px black;
+	padding:20px;
+	z-index:2;
+}
+
+#centrepage
+{
+	display: inline-block;
+	vertical-align: top;
+	width: 600px;
+	background-color:#e0e0d0; // prototype only
+}
+
+#rightpage
+{
+	display: inline-block;
+	vertical-align: top;
+	width: 345px;
+	margin: 0 0 0 10px;
+	background-color:#e0d0e0; // prototype only
+}
+
+#officenotes
+{
+	//height:150px;
+	background-color:#e0e0e0;
+	
+}
+#officenotesadmin
+{
+	//height:150px;
+	background-color:#e0e0e0;
+	
+}
+#rightnav {
+	position:absolute;
+	top:0;
+	left:780px;
+	float: left;
+	width:200px;
+	height:590px;
+	background-color:white;
+	padding:10px;
+}
+
+.homepagel
+{
+	display: inline-block;
+	width: 10em;
+	margin: 0.5em 10px 0.5em 0;
+}
+
+.myaccountl
+{
+	display: inline-block;
+	width: 15em;
+	margin: 0.5em 10px 0.5em 0;
+}
+
+#tassignments {
+	position:absolute;
+	top:185px;
+	left:160px;
+	width:200px;
+	background-color:LightSlateGray;
+	color:white;
+	z-index:7;
+	padding-top:5px;
+}
+
+#tgroups {
+	position:absolute;
+	top:215px;
+	left:160px;
+	width:200px;
+	background-color:LightSlateGray;
+	color:white;
+	z-index:7;
+	padding-top:5px;
+}
+
+/*instadmin divs below*/
+
+#acadterms {
+	position:absolute;
+	top:145px;
+	left:160px;
+	width:200px;
+	background-color:LightSlateGray;
+	color:white;
+	z-index:7;
+	padding-top:5px;
+}
+
+#people {
+	position:absolute;
+	top:200px;
+	left:160px;
+	width:200px;
+	background-color:LightSlateGray;
+	color:white;
+	z-index:7;
+	padding-top:5px;
+}
+
+#iaresults {
+	position:absolute;
+	top:235px;
+	left:160px;
+	width:200px;
+	background-color:LightSlateGray;
+	color:white;
+	z-index:7;
+	padding-top:5px;
+}
+
+#iaprofic {
+	position:absolute;
+	top:270px;
+	left:160px;
+	width:200px;
+	background-color:LightSlateGray;
+	color:white;
+	z-index:7;
+	padding-top:5px;
+}
+
+#adminacct {
+	position:absolute;
+	top:310px;
+	left:160px;
+	width:200px;
+	background-color:LightSlateGray;
+	color:white;
+	z-index:7;
+	padding-top:5px;
+}
+
+table.termslist
+{
+    border-collapse: collapse;
+    width: auto;
+	table-layout: fixed;
+}
+
+table.termslist tbody
+{
+	//display: block;
+	overflow-y: auto;
+	min-height: 260px;
+	width: auto;
+}
+
+table.termslist th.hilight, td.hilight
+{
+	padding: 5px 0 5px 0;
+	font-family:Arial, Verdana, sans-serif;
+	font-size:1.00em;
+	font-weight:bold;
+}
+
+table.termslist tr
+{
+	width: 100%;
+}
+
+td.laterm, th.laterm
+{
+	width: 140px;
+	padding-right: 1em;
+	text-align: left;
+	white-space: nowrap;
+}
+
+td.laclass, th.laclass
+{
+	width: 140px;
+	padding-right: 1em;
+	text-align: left;
+	white-space: nowrap;
+}
+
+td.laclasses
+{
+	width: 140px;
+	padding-right: 1em;
+	text-align: left;
+	white-space: pre-line;
+}
+
+td.ladate, th.ladate
+{
+	width: 80px;
+	padding-right: 1em;
+	text-align: left;
+}
+
+td.ladatet, th.ladatet
+{
+	width: 140px;
+	padding-right: 1em;
+	text-align: left;
+	white-space: nowrap;
+}
+
+td.lasinglename, th.lasinglename
+{
+	width: 100px;
+	padding-right: 1em;
+	text-align: left;
+}
+
+td.lafullname, th.lafullname
+{
+	width: 180px;
+	padding-right: 1em;
+	text-align: left;
+}
+
+td.raemailaddr, th.raemailaddr
+{
+	width: 250px;
+	padding-right: 1em;
+	text-align: right;
+}
+
+td.rausercode, th.rausercode
+{
+	width: 100px;
+	padding-right: 1em;
+	text-align: right;
+}
+
+td.ranumber, th.ranumber
+{
+	width: 100px;
+	padding-right: 1em;
+	text-align: right;
+}
+
+td.laannouncement, th.laannouncement
+{
+	width: 300px;
+	padding-right: 1em;
+	text-align: left;
+}
+
+td.ebutton, th.ebutton
+{
+	padding: 0 10px;
+}
+
+.covmsg:hover
+{
+	background-color: MistyRose;
+}
+
+tr.covmsg:hover
+{
+	background-color: #eee2e1 ;
+}
+.covnotif:hover
+{
+	background-color: MistyRose ;
+}
+
+tr.covnotif:hover
+{
+	background-color: LightSteelBlue;
+}
+.usercreatel
+{
+	display: inline-block;
+	width: 10em;
+	margin: 0 10px 0.5em 0;
+	vertical-align:top;
+}
+
+.usercreatei
+{
+	width: 20em;
+}
+
+.subbutton
+{
+	margin:1.0em 0px 1.0em 0px;
+	padding:0.25em 1.0em 0.25em 1.0em;
+}
+
+#login {
+	position: relative; //absolute;
+	//top:50px;
+	left:250px;
+	width:400px;
+	background-color:lightgray;
+	padding:30px;
+}
+
+#login input.logtext {
+	position:absolute;
+	left:140px;
+}
+
+#login input.fltright {
+	float:right;
+}
+
+#login a.fltright {
+	position:relative;
+	float:right;
+	text-decoration:underline;
+	font-weight:bold;
+}
+
+#login a.nav {
+	font-size:0.80em;
+}
+
+#loginhead {
+	font-weight:bold;
+	font-size:1.20em;
+	text-align:center;
+}
+	
+
+
+#loginframe {
+	position:relative;
+	height:280px;
+	width:400px;	
+}
+
+#loginframe input.form-text {
+	position:absolute;
+	left:120px;
+}
+
+#content {
+	height:600px;	
+}
+
+#langradiochoice {
+	display:block;
+	width:600px;
+}
+
+.messaget
+{
+    height:200px;
+    overflow:auto;
+}
+
+#emaill
+{
+	display:inline-block;
+	width:10em;
+}
+
+.createmsgl
+{
+	display:inline-block;
+	width:10em;
+	margin: 0 10px 0.5em 0;
+	vertical-align:top;
+}
+
+#clientsdd
+{
+	display:inline-block;
+	width:20em;
+	position:relative;
+}
+
+#createconfirm
+{
+	display:inline-block;
+	background-color:#d6d6c2;
+	color:red;
+	border:2px solid black;
+	border-radius: 10px;
+	padding:20px;
+	margin-left:40px;
+}
+
+#subjecttf
+{
+	display:inline-block;
+	position:relative;
+}
+
+#messageta
+{
+	display:inline-block;
+	position:relative;
+}
+
+#pdfframe {
+	height:670px;
+	width:1100px;
+	margin:0;
+	padding:0;
+	zoom: 0.85; -moz-transform: scale(0.85); -moz-transform-origin: 0 0;
+}
+
+#pdftable {
+	width:960px;
+}

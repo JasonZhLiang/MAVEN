@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd"
+	lang="en">
+<wicket:head>
+<script src="LCTableSizer.js"></script>
+</wicket:head>
+<body>
+	<wicket:panel>
+		<h1>Switch User Permission</h1>
+		<h2 wicket:id="namelab" id="namelab">user</h2>
+		<form wicket:id="swappermform" id="swappermform">
+			<div wicket:id="ipchoice">
+			<div class="maxxet">
+				<table class="termslist">
+					<thead>
+						<tr>
+							<th class="barebutton">Select</th>
+							<th class="lainstitution">Institution</th>
+							<th class="lapermission">Permission</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr wicket:id="instperm" id="instperm">
+							<td class="barebutton"><input type="radio" wicket:id="pickip" /></td>
+							<td class="lainstitution" wicket:id="instLab">institution</td>
+							<td class="lapermission" wicket:id="permLab">permission</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			</div>
+			<input type="submit" class="subbutton" value="Go" /><br>
+		</form>
+	</wicket:panel>
+</body>
+</html>

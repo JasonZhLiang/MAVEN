@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd"
+	lang="en">
+<head>
+<style type="text/css">
+div
+{
+	padding: 15px 0 5px 0;
+	text-align: center;
+	margin: 0 0 0 0;
+	font-size: 0.75em;
+	clear: both;
+}
+</style>
+</head>
+<body>
+	<wicket:panel>
+		<div id="footer">
+			Page design copyright &#169; 2013-2014 Lingua Classica. All rights reserved. Design by <a href="http://www.freecsstemplates.org/" id="fct" target="blank">FCT</a>.<br/>
+			Hosted by <a href="https://www.viviotech.net/" id="viviotechnologies" target="blank">Vivio Technologies</a>.
+		</div>
+	</wicket:panel>
+</body>
+</html>

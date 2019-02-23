@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<wicket:head>
+<script src="LCFixedSizer.js"></script>
+</wicket:head>
+
+<body>
+<wicket:extend>
+	
+	<h1><wicket:message key="oaconsultantsshdr">assignments</wicket:message></h1>
+	Select :&nbsp;&nbsp;
+		<span wicket:id="classcheckboxes" id="classcheckboxes" class="inline"></span>&nbsp;&nbsp;<br/>
+		<br>
+	<div id="howTo" style="border:thin solid black;display:inline-block;padding:10px;margin:20px;background-color:lightgray;">
+	<wicket:message key="oaconsultantshelp1">click1help</wicket:message><br>
+	<wicket:message key="oaconsultantshelp2">click2help</wicket:message><br>
+	<wicket:message key="oaconsultantshelp3">click3help</wicket:message><br>
+	<wicket:message key="oaconsultantshelp4">click4help</wicket:message><br>
+	<wicket:message key="oaconsultantshelp5">click5help</wicket:message>
+	</div>
+	<br>
+	
+	<div wicket:id="tree">[tree]</div>
+	<br><br><br>
+	
+	<div wicket:id="div_uclients" id="Clients">
+		<h2><label wicket:id="clients"> </label></h2>
+		<div id="howTo" style="border:thin solid black;display:inline-block;padding:10px;margin:20px;background-color:lightgray;">
+			<wicket:message key="oaconsultantshelp6">click6help</wicket:message>
+		</div>
+		<br>
+		
+		<table>
+			<tr wicket:id="clientlist">
+				<td><a href="#" wicket:id="clientname"><span wicket:id="clientlabel"></span></a></td>
+			</tr>
+		</table>
+	</div>
+</wicket:extend>
+</body>
+
+</html>

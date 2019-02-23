@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<wicket:head>
+<script src="LCTableSizer.js"></script>
+</wicket:head>
+
+<body>
+<wicket:extend>
+	
+	<h1><wicket:message key="oaclientsshdr">assignments</wicket:message></h1>
+	<wicket:message key="selectl">select</wicket:message>&nbsp;&nbsp;
+	<span wicket:id="classcheckboxes" id="classcheckboxes" class="inline"></span>&nbsp;&nbsp;<br/>			
+	<br><br>
+	<wicket:message key="selectfroml">select from year</wicket:message>&nbsp;&nbsp;<select wicket:id="fromYear"></select>&nbsp;&nbsp;
+	<wicket:message key="monthl">month</wicket:message>&nbsp;&nbsp;<select wicket:id="fromMonth"></select>&nbsp;&nbsp;
+	<wicket:message key="toyearl">to year</wicket:message>&nbsp;&nbsp;<select wicket:id="toYear"></select>&nbsp;&nbsp;
+	<wicket:message key="monthl">month</wicket:message>&nbsp;&nbsp;<select wicket:id="toMonth"></select>
+	<br><br>
+	<div wicket:id="div_uclients" id="Clients" class="maxxet">
+		<table>
+			<tr wicket:id="clientlist">
+				<td><a href="#" wicket:id="clientname"><span wicket:id="clientlabel"></span></a></td>
+			</tr>
+		</table>
+	</div>
+</wicket:extend>
+</body>
+
+</html>

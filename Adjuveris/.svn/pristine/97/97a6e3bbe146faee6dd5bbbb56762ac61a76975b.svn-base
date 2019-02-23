@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd"
+	lang="en">
+<wicket:head>
+<script src="LCFixedSizer.js"></script>
+</wicket:head>
+<body>
+<wicket:extend>
+	<form wicket:id="usercopyform">
+		<h1>Creating or adding to a <span wicket:id="userlabel">user</span> list:</h1>
+		<h2>Use a <span wicket:id="userlabel2">user</span> list from a previous term</h2>
+		<br/>
+		<label class="manualcreatel">Copy list from:</label>
+		<select wicket:id="sourcetermselect">
+		<option>term 1</option>
+		<option>term 2</option>
+		<option>term 3</option>
+		</select>
+		<br/>
+		<label class="manualcreatel">Copy list to:</label>
+		<select wicket:id="desttermselect">
+		<option>term 1</option>
+		<option>term 2</option>
+		<option>term 3</option>
+		</select>
+		<br/>
+		<br>
+		Save list entries into the selected term.  <input type="submit" value="Save"/>
+	</form>
+</wicket:extend>
+</body>
+</html>

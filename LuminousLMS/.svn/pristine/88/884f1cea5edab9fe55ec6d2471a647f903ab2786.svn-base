@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+	<wicket:panel>
+		<div class="navbar navbar-fixed-top">
+			<div class="navbar-inner">
+				<div class="container">
+					<div class="nav-collapse">
+						<ul class="nav">
+							<li wicket:id="menuItems"></li>
+							<wicket:link>
+								<li><a href="#" id="logout_link" wicket:id="logout_link">Logout</a></li>
+							</wicket:link>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</wicket:panel>
+</body>
+</html>

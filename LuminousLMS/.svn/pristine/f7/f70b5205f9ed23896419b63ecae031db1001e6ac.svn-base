@@ -1,0 +1,15 @@
+footrights=Tous les droits sont réservés
+foothost=Hébergé par&nbsp;
+
+forgotpassh=Mot de passe oublié
+forgotpassp1=Veuillez entrer les informations ci-dessous pour nous permettre de générer un mot de passe pour votre compte.
+forgotpassp2=Votre mot de passe vous sera envoyé par e-mail à votre adresse e-mail.
+forgotpasseal=Adresse e-mail
+forgotpassmsg=Un nouveau mot de passe a peut-être été envoyé à l'adresse e-mail saisie.
+forgotpassb=Réinitialiser
+
+forgotpassnotreg=Cette adresse e-mail n'est pas enregistrée auprès des Services de l'Emploi
+
+sendsubjectforgot=Réinitialiser votre mot de passe
+sendtextforgot1=Utilisez le mot de passe suivant pour accéder à votre compte:
+sendtextforgot2=Nous vous suggérons de créer un mot de passe de votre choix en vous connectant et en sélectionnant le menu "Mon compte".

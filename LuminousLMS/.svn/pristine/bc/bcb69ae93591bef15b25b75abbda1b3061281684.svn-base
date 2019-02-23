@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<wicket:head>
+<script src="LCFixedSizer.js"></script>
+
+<style>
+table {
+  border-collapse: collapse;
+}
+
+td, th {
+  border: 1px solid #999;
+  padding: 0.25rem;
+  #padding: 0px;
+  text-align: centre;
+}
+th.creationDateHdr,th.expiryDateHdr {
+  width:140px;
+}
+th.textHdr {
+  width:400px;
+}
+th.subjHdr {
+  width:200px;
+}
+
+td {
+  #font-family: "Times New Roman", Georgia, Serif;
+  font-family: Serif;
+  font-size:smaller;
+}
+tr.hdrbackground {
+   background-color: #afa8a8;
+}
+tr.frombackground {
+   background-color: #ccc;
+}
+tr.tobackground {
+   background-color: #fff;
+}
+tr.tobackgroundunread {
+   background-color: #fff;
+   font-weight: bold;
+}
+td.unreadfont {
+}
+</style>
+</wicket:head>
+
+<body>
+<wicket:extend>
+	
+	<h1><wicket:message key="notificationhdr">notifications</wicket:message></h1>
+	<wicket:message key="selectl">select</wicket:message>&nbsp;&nbsp;
+	<span wicket:id="classcheckboxes" id="classcheckboxes" class="inline"></span>&nbsp;&nbsp;<br/>			
+	<br><br>
+	<wicket:message key="selectfroml">select from year</wicket:message>&nbsp;&nbsp;<select wicket:id="fromYear"></select>&nbsp;&nbsp;
+	<wicket:message key="monthl">month</wicket:message>&nbsp;&nbsp;<select wicket:id="fromMonth"></select>&nbsp;&nbsp;
+	<wicket:message key="toyearl">to year</wicket:message>&nbsp;&nbsp;<select wicket:id="toYear"></select>&nbsp;&nbsp;
+	<wicket:message key="monthl">month</wicket:message>&nbsp;&nbsp;<select wicket:id="toMonth"></select>
+	<br><br>
+			<div >
+				<form wicket:id="notificationsf" id="notificationsf">
+					<table>
+						<thead>
+							<tr class="hdrbackground">
+								<th class="creationDateHdr"><label><wicket:message key="creationDatel">creation date</wicket:message></label></th>
+								<th class="expiryDateHdr"><label><wicket:message key="expirationDatel">expiration date</wicket:message></label></th>
+								<th class="subjHdr"><label><wicket:message key="subjectl">subject</wicket:message></label></th>
+							<th><label><wicket:message key="notificationText1">text</wicket:message></label></th>
+							</tr>
+						 	 </thead>
+						
+						<tr>
+							<td></td>
+						</tr>
+						  <tbody>
+							<tr wicket:id="notifList">
+								<td class="covmsg" wicket:id="creationDatefld" id="creationDatefld"></td>
+								<td class="covmsg" wicket:id="expirationDatefld" id="expirationDatefld"></td>
+								<td class="covmsg" wicket:id="subjectfld" id="subjectfld"></td>
+								<td class="covmsg" wicket:id="notificationfld" id="notificationfld"></td>
+							</tr>
+			 			 </tbody>
+						
+					</table>
+					
+				</form>
+			</div>
+
+</wicket:extend>
+</body>
+
+</html>

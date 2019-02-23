@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd"
+	lang="en">
+<wicket:head>
+<script src="LCTableSizer.js"></script>
+</wicket:head>
+<body>
+<wicket:extend>
+	<h1>Teachers Summary Results</h1>
+	<form wicket:id="teachersSummary">
+		<div class="maxxet">
+			<table class="termslist">
+				<thead>
+					<tr>
+						<th class="lafullname">Teacher name</th>
+						<!-- <th class="ranumber">Terms</th> -->
+						<!-- <th class="ranumber">Classes</th> -->
+						<th class="ranumber">Vocabulary</th>
+						<th class="ranumber">Syntax</th>
+						<th class="ranumber">Inflection</th>
+						<th class="ranumber">Comprehension</th>
+						<th class="ranumber">Average</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr><td colspan="6" class="hilight">Current Academic Terms</td></tr>
+					<tr wicket:id="currentList">
+						<td wicket:id="currentteachernameLab" class="lafullname">text here</td>
+						<td wicket:id="currentvocabularyLab" class="ranumber">count</td>
+						<td wicket:id="currentsyntaxLab" class="ranumber">overall</td>
+						<td wicket:id="currentinflectionLab" class="ranumber">count</td>
+						<td wicket:id="currentcomprehensionLab" class="ranumber">text</td>
+						<td wicket:id="currentaverageLab" class="ranumber">text</td>
+					</tr>
+					<tr><td colspan="6" class="hilight">Past Academic Terms</td></tr>
+					<tr wicket:id="pastList">
+						<td wicket:id="pastteachernameLab" class="lafullname">text here</td>
+						<td wicket:id="pastvocabularyLab" class="ranumber">count</td>
+						<td wicket:id="pastsyntaxLab" class="ranumber">overall</td>
+						<td wicket:id="pastinflectionLab" class="ranumber">count</td>
+						<td wicket:id="pastcomprehensionLab" class="ranumber">text</td>
+						<td wicket:id="pastaverageLab" class="ranumber">text</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</form>
+</wicket:extend>
+</body>
+</html>

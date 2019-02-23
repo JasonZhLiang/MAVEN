@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd"
+	lang="en">
+<wicket:head>
+<script src="LCFixedSizer.js"></script>
+</wicket:head>
+<body>
+<wicket:extend>
+	<h1><span wicket:id="classaction">action</span></h1>
+	<form wicket:id="creditclassform">
+		<label class="manualcreatel">Class name:</label>
+		<input type="text" wicket:id="classnametf" id="classnametf" class="vclassname manualcreatei" autofocus /><br/>
+		<label class="manualcreatel">Class code:</label>
+		<input type="text" wicket:id="classcodetf" id="classcodetf" class="manualcreatei" onfocus="starve()" /><br/>
+		<label class="manualcreatel">Academic term:</label>
+		<select wicket:id="selectterm" id="selectterm" class="manualcreatei" onfocus="starve()" required>
+			<option>option 1</option>
+			<option>option 2</option>			
+		</select><br/>
+		<input type="submit" class="subbutton" value="Save"/><br/><br/>
+	</form>
+</wicket:extend>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<wicket:head>
+	<script src="LCFixedSizer.js"></script>
+</wicket:head>
+<body>
+	<wicket:extend>
+		<!--     <iframe wicket:id="test" width="90%" height="500px"></iframe> -->
+
+		<h2>Other Resources</h2>
+		<table>
+			<tr>
+				<th><label>Other Resource Name</label></th>
+			</tr>
+			<tr wicket:id="otherResView">
+				<td wicket:id="resname">resname</td>
+			</tr>
+		</table>
+
+	</wicket:extend>
+</body>
+</html>

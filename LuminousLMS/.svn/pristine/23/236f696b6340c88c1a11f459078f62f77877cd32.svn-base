@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd"
+	lang="en">
+<wicket:head>
+<script src="LCFixedSizer.js"></script>
+<script>
+	function starve()
+	{
+		document.getElementById("feedbackmessages").style.visibility = "hidden";
+	}
+</script>
+</wicket:head>
+<wicket:extend>
+	<h1><wicket:message key="homeheader">home page</wicket:message></h1>
+	<div><a wicket:id="anglo" id="anglo">English</a></div>
+	<div><a wicket:id="franco" id="franco">Fran&#231;ais</a></div>
+	<h2><wicket:message key="loginheader">log in</wicket:message></h2>
+	<form wicket:id="HomeForm" id="HomeForm">
+		<label class="homepagel"><wicket:message key="lemail">email address</wicket:message></label>
+		<input type="email" wicket:id="emailAddress" id="emailAddress" autofocus maxlength="64" />
+		<br>
+		<label class="homepagel"><wicket:message key="lpassword">password</wicket:message></label>
+		<input type="password" wicket:id="password" id="password" maxlength="64" onfocus="starve()" />
+		<br>
+		
+		
+		<label class="homepagel"><wicket:message key="lquestion" wicket:id="lquestion">Security Question</wicket:message></label>	
+		<label wicket:id="questiontlbl" id="questiontlbl">question</label>	
+		<br>
+		<label class="homepagel"><wicket:message key="lanswer" wicket:id="lanswer">Security Answer</wicket:message></label>	
+		<input type="text" wicket:id="answertf" id="answertf" maxlength="64" onfocus="starve()" />
+		<br>
+		<br>
+		<input class="subbutton" type="submit" id="subform" value="Log in/se connecter" wicket:message="value:bsubmit" />
+		<br>
+	</form>
+</wicket:extend>
+</html>
+	

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd"
+	lang="en">
+<wicket:head>
+<script src="LCFixedSizer.js"></script>
+</wicket:head>
+<body>
+<wicket:extend>
+	<form wicket:id="userform">
+		<h1><span wicket:id="actionlabel">Action</span> <span wicket:id="userlabel">User</span></h1>
+		<label class="manualcreatel">First name:</label>
+		<input type="text" wicket:id="firstnametf" id="firstnametf" class="vclassname manualcreatei" autofocus /><br/>
+		<label class="manualcreatel">Last name:</label>
+		<input type="text" wicket:id="lastnametf" id="lastnametf" class="vclassname manualcreatei" onfocus="starve()" /><br/>
+		<label class="manualcreatel">Email address:</label>
+		<input type="email" wicket:id="emailaddresstf" id="emailaddresstf" class="vclassname manualcreatei" onfocus="starve()" /><br/>
+		<label class="manualcreatel"><span wicket:id="codelabel">User</span> code:</label>
+		<input type="text" wicket:id="usercodetf" id="usercodetf" class="manualcreatei" onfocus="starve()" /><br/>
+		<label class="manualcreatel">Academic term:</label>
+		<select wicket:id="selectterm" id="selectterm" class="manualcreatei" required>
+			<option>option 1</option>
+			<option>option 2</option>			
+		</select><br/>
+		<input type="submit" class="subbutton" value="Save"/><br/><br/>
+	</form>
+</wicket:extend>
+</body>
+</html>

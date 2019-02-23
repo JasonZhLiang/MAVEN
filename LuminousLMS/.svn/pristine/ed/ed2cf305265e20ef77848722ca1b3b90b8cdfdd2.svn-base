@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- https://logging.apache.org/log4j/2.x/articles.html
+http://mycuteblog.com/log4j2-xml-configuration-example/ -->
+<Configuration status="DEBUG">
+	<Properties>
+		<Property name="log-path">${sys:catalina.home}/logs</Property>
+	</Properties>
+	<Appenders>
+		<Console name="console-log" target="SYSTEM_OUT">
+			<PatternLayout pattern="[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n"/>
+		</Console>
+		<RollingFile name="trace-log" fileName="${log-path}/luminous-trace.log"
+			filePattern="${log-path}/luminous-trace-%d{dd}.log">
+			<PatternLayout>
+				<pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n</pattern>
+			</PatternLayout>
+			<Policies>
+				<TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+			</Policies>
+		</RollingFile>
+		<RollingFile name="error-log" fileName="${log-path}/luminous-error.log"
+			filePattern="${log-path}/luminous-error-%d{dd}.log">
+			<PatternLayout>
+				<pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n</pattern>
+			</PatternLayout>
+			<Policies>
+				<TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+			</Policies>
+		</RollingFile>
+	</Appenders>
+	<Loggers>
+		<Logger name="com.linguaclassica" level="debug" additivity="false">
+			<appender-ref ref="trace-log" level="debug"/>
+			<appender-ref ref="error-log" level="error"/>
+			<appender-ref ref="console-log" level="debug"/>
+		</Logger>
+		<Root level="info" additivity="false">
+			<AppenderRef ref="console-log"/>
+		</Root>
+	</Loggers>
+</Configuration>

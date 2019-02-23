@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+<title>Adjuveris eTutor</title>
+<script src="LCTableSizer.js"></script>
+<link rel="stylesheet" type="text/css" href="site.css" />
+</head>
+<body>
+	<div id="wrapper">
+		<div id="leftnav">
+			<div wicket:id="feedbackmessages" id="feedbackmessages"></div>
+			<div id="logo"><img src="AlpheiosLogo160x48.gif"/></div>
+			<div id="navmenu">
+				<ul class="menu">
+					<li class="menu"><a href="#" class="fltright">Forgot password</a></li>
+					<li class="menu"><a href="#">Contact Us</a></li>
+					<li class="menu"><a href="#" onClick="displayHelp();">Help/user guide</a></li>
+				</ul>
+			</div>
+			<div id="footer">
+				<a href="#">Contact</a>|<a href="#">About</a><br/>
+				Copyright &copy; Adjuveris 2017<br/>
+				All rights reserved<br/>
+				Hosted by Vivio Technologies
+			</div>
+		</div>
+		<div id="page">
+			<div wicket:id="selpermpanel" id="selpermpanel"></div>
+		</div>
+	</div>
+</body>
+</html>

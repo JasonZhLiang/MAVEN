@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd"
+	lang="en">
+<wicket:head>
+<script src="LCTableSizer.js"></script>
+<style>
+table {
+    width: 100%;
+    border: 1px solid darkgray;
+    border-collapse: collapse;
+}
+th {
+	background-color: black;
+	color: white;
+}
+tr, td, th {
+    text-align: left;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    border: 1px solid darkgray;
+}
+tr:nth-child(even){background-color: lightblue;}
+tr:nth-child(odd){background-color: white;}
+tr:hover {background-color: blue; color: yellow;}
+</style>
+</wicket:head>
+<body>
+<wicket:extend>
+	<form wicket:id="editusersform">
+		<h1><span wicket:id="userlabel">Teacher</span> List for term:  
+		<span>
+		<select wicket:id="selectterm" id="selectterm" class="manualcreatei" required>
+			<option>option 1</option>
+			<option>option 2</option>			
+		</select>
+		</span>
+		</h1>
+		<br>
+		<div class="maxxet">
+			<table>
+				<thead>
+					<tr>
+						<th class="laterm">First name</th>
+						<th class="laterm">Last name</th>
+						<th class="laterm">Email address</th>
+						<th class="laterm"><span wicket:id="codelabel">Employee</span> code</th>
+						<th class="ebutton"></th>
+						<th class="ebutton"></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr wicket:id="termlist">
+						<td wicket:id="firstnamelab">text here</td>
+						<td wicket:id="lastnamelab">text here</td>
+						<td wicket:id="emailaddresslab">text here</td>
+						<td wicket:id="studentnumberlab">text here</td>
+						<td class="ebutton"><input type="submit" wicket:id="editbutton" value="Edit" /></td>
+						<td class="ebutton"><input type="submit" wicket:id="deletebutton" value="Delete"/></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</form>
+</wicket:extend>
+</body>
+</html>

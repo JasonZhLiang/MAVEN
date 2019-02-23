@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<wicket:head>
+<!-- <script src="LCFixedSizer.js"></script> -->
+<script type="text/javascript" src="pdf.js"></script>
+</wicket:head>
+<body>
+	<div id="wrapper">
+		<wicket:extend>
+			<div>
+				<form wicket:id="displayresf" id="displayresf">
+				<table id="pdftable">
+				<tr>
+					<th><label>File Viewer</label></th>
+				</tr>
+				<tr>
+					<td>
+						<iframe wicket:id="pdfframe" id="pdfframe" style="height:600px;width:100%"></iframe>
+					</td>
+				</tr>
+			</table>
+				</form>
+			</div>
+		</wicket:extend>
+	</div>
+</body>
+</html>

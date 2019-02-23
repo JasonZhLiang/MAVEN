@@ -1,0 +1,5 @@
+user=alph
+password=arethusa232
+url=jdbc:mysql://localhost/alphplus?characterEncoding=UTF-8
+driverClassName=com.mysql.jdbc.Driver
+generateDdl=false

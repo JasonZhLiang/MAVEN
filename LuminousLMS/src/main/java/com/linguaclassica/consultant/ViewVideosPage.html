@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+
+<wicket:head>
+<script type="text/javascript" src="jQuery.js"></script>
+<script src="Bilingual.js"></script>
+</wicket:head>
+<body>
+<wicket:extend>
+<div id="innercontent">
+<span class="title" id="viewvideostitle">View Videos Page</span><br/>
+<table>
+<thead>
+<tr>
+<th id="titleth">Title</th>
+<th id="viewth">View</th>
+<th id="transcriptth">Transcript</th>
+</tr>
+</thead>
+<tbody>
+<tr wicket:id="videolist">
+<td wicket:id="videotitle">title</td>
+<td><a href="#" wicket:id="viewlink">View</a></td>
+<td><a href="#" wicket:id="transcriptlink">Transcript</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+</wicket:extend>
+</body>
+</html>

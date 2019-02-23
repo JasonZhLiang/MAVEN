@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd"
+	lang="en">
+<wicket:head>
+<script src="LCFixedSizer.js"></script>
+</wicket:head>
+<wicket:extend>
+	<h1>Session Expired</h1>
+	<p>The session has expired because it was logged out or was inactive longer than permitted.<br>
+	Click the Log In menu to proceed to the login page.</p>
+	<!-- 
+	<p>La session a expiré car elle a été déconnectée ou était inactif plus longtemps que permis.<br>
+	Cliquez sur le menu Connexion pour accéder à la page de connexion.</p> -->
+	<p>La session a expir&#233; car elle a &#233;t&#233; d&#233;connect&#233;e ou &#233;tait inactif plus longtemps que permis.<br>
+	Cliquez sur le menu Connexion pour acc&#233;der &#224; la page de connexion.</p>
+</wicket:extend>
+</html>

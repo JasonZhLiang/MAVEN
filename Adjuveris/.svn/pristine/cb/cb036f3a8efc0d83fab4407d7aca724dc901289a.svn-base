@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<wicket:head>
+<script src="LCFixedSizer.js"></script>
+</wicket:head>
+<body>
+<wicket:extend>
+	<h1>Teacher Preferences</h1>
+	<form wicket:id="teachpreff" id="teachpreff">
+		<label class="manualcreatel">Date format</label><select wicket:id="datepref"id="datepref" ></select> <br>
+		<label class="manualcreatel">Time format</label><select wicket:id="timepref"id="timepref" ></select><br>
+		<label class="manualcreatel">Current term</label><select wicket:id="termpref"id="termpref" ></select><br>
+		<br>
+		<input type="submit" class="subbutton" value="Update Preferences"/><br>
+	</form>
+</wicket:extend>
+</body>
+</html>

@@ -1,0 +1,255 @@
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<META HTTP-EQUIV="Cache-Control" CONTENT="no-cache">
+<meta name="author" content="Eugene Price"/>
+<meta name="copyright" content="Lingua Classica, 2012.  All rights reserved."/>
+<meta name="keywords" content="Latin, Lingua Classica, verb, language, learning, reading, 
+self-instruction, education, self-learning,software, parse, construe, grammar, syntax, 'study aid'">
+<title>Lingua Classica Latin Verb Drill</title>
+<script type="text/javascript" language="javascript"  src="LatinVerbDrill.js"></script>
+<script type="text/javascript" language="javascript"  src="LatinVerbArr.js"></script>
+<script type="text/javascript" language="javascript"  src="hitCount.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body onLoad="preGetOpts();">
+<div id="wrapper">
+<div id="header">
+	<div id="logo">
+		<h1><a href="index.html">Lingua Classica</a></h1>
+	</div>
+	<div id="menu">
+		<ul>
+		
+		</ul>
+	</div>
+</div>
+<div id="page-dr">
+<div class="bodydrill">
+<form name="checkform" method="post" action="jasonServlet" onsubmit="return validateForm()">
+
+<table><!--a-->
+<tr><td width="20"><b></b></td>
+<td colspan="4">
+<h4>Latin Verb Drill</h4>
+<p>
+To test your knowledge of verb forms, choose a verb and then tense and voice from the menus 
+below.  Then enter the correct forms, by person and number, into the text boxes provided. <b>Note:</b> The alternative forms such as 'ii' in lieu of 'ivi' etc. 
+in the conjugation of 'ire' and '-ere' in place of '-eris' in the present and imperfect passive 
+subjunctives or in place of '-erant' in the perfect active indicative have been omitted for the 
+sake of simplicity.
+</p>
+</td>
+</tr>
+<tr>
+<td></td>
+<td width="150">
+<h3>Choose a verb:</h3>
+<script language="JavaScript">
+
+document.write('<select class="lvd" name="selOpts" id="selOpts" onChange="getOpts(this.form);" size="4">');
+for (var i = 0; i < verbArr.length; i++) {
+	document.write('<option>' + verbArr[i] + '</option>'); 
+	}
+document.write('</select>');
+</script>
+</td>
+<td width="150">
+<h3>Choose a tense:</h3>
+<script language="JavaScript">
+
+document.write('<select class="lvd" name="tenseOpts" id="tenseOpts" onChange="getOpts(this.form);" size="4">');
+//"Clear();" size="4">');
+for (var i = 0; i < tenseArr.length; i++) {
+	document.write('<option>' + tenseArr[i] + '</option>'); 
+	}
+document.write('</select>');
+</script>
+</td>
+<!--<td align="left"><input class="lvd" type="button" id="gobut" value="Click here to load data for selected verb and tense" onClick="getOpts(this.form);"/>
+</td>-->
+<td class="go">Data loaded for:  <input class="lvd" type="text" id="golab" size="30" value="None"/></td>
+</tr>
+<tr>
+<td colspan="5">
+
+<table> <!--b-->
+<tr><th align="left">Active</th><td></td><td></td><td></td><th align="left">Passive</th><td></td></tr>
+
+<tr><td><table> <!--c-->
+<tr><th>Person</th><th>Indicative</th></tr>
+<tr><td>1st sing.:</td><td><input class="lvd" type="text" name="answer1" id="frstSingAIa" size="15" autocomplete="off"/></td>
+</tr>
+<tr><td>2nd sing.:</td><td><input class="lvd" type="text" name="answer2" id="scndSingAIa" size="15" autocomplete="off"/></td>
+</tr>
+<tr><td>3rd sing.:</td><td><input class="lvd" type="text" name="answer3" id="thrdSingAIa" size="15" autocomplete="off"/></td>
+</tr>
+<tr><td height="10"><b></b></td></tr>
+<tr><td>1st plural:</td><td><input class="lvd" type="text" name="answer4" id="frstPlAIa" size="15" autocomplete="off"/></td>
+</tr>
+<tr><td>2nd plural:</td><td><input class="lvd" type="text" name="answer5" id="scndPlAIa" size="15" autocomplete="off"/></td>
+</tr>
+<tr><td>3rd plural:</td><td><input class="lvd" type="text" name="answer6" id="thrdPlAIa" size="15" autocomplete="off"/></td>
+</tr>
+</table> <!--c-->
+
+</td>
+
+<td>
+<table class="hidden" id = "show"> <!--d-->
+<tr><th class="hide">-</th></tr>
+<tr><td><input class="lvd" type="text" name="answer7"size="15" autocomplete="off"/></td>
+</tr>
+<tr><td><input class="lvd" type="text" name="answer8" size="15"autocomplete="off"/></td>
+</tr>
+<tr><td><input class="lvd" type="text" name="answer9" size="15" autocomplete="off"/></td>
+</tr>
+<tr><td height="10"><b></b></td></tr>
+<tr><td><input class="lvd" type="text" name="answer10" size="15" autocomplete="off"/></td>
+</tr>
+<tr><td><input class="lvd" type="text" name="answer11" size="15" autocomplete="off"/></td>
+</tr>
+<tr><td><input class="lvd" type="text" name="answer12" size="15" autocomplete="off"/></td>
+</tr>
+</table> <!--d-->
+</td>
+
+<td>
+<!-- START Subjunctive -->
+<table> <!--e-->
+<tr><th>Subjunctive</th></tr>
+<tr><td><input class="lvd" type="text" name="answer13" id="frstSingASa" size="15" autocomplete="off"/></td>
+</tr>
+<tr><td><input class="lvd" type="text" name="answer14" id="scndSingASa" size="15" autocomplete="off"/></td>
+</tr>
+<tr><td><input class="lvd" type="text" name="answer15" id="thrdSingASa" size="15" autocomplete="off"/></td>
+</tr>
+<tr><td height="10"><b></b></td></tr>
+<tr><td><input class="lvd" type="text" name="answer16" id="frstPlASa" size="15" autocomplete="off"/></td>
+</tr>
+<tr><td><input class="lvd" type="text" name="answer17" id="scndPlASa" size="15" autocomplete="off"/></td>
+</tr>
+<tr><td><input class="lvd" type="text" name="answer18" id="thrdPlASa" size="15" autocomplete="off"/></td>
+</tr>
+</table> <!--e-->
+
+</td>
+
+<td>
+<table class="hidden" id = "show2"> <!--f-->
+<tr><th class="hide">-</th></tr>
+<tr><td><input class="lvd" type="text" name="answer19" size="15" autocomplete="off"/></td>
+</tr>
+<tr><td><input class="lvd" type="text" name="answer20" size="15" autocomplete="off"/></td>
+</tr>
+<tr><td><input class="lvd" type="text" name="answer21" size="15" autocomplete="off"/></td>
+</tr>
+<tr><td height="10"><b></b></td></tr>
+<tr><td><input class="lvd" type="text" name="answer22" size="15" autocomplete="off"/></td>
+</tr>
+<tr><td><input class="lvd" type="text" name="answer23" size="15" autocomplete="off"/></td>
+</tr>
+<tr><td><input class="lvd" type="text" name="answer24" size="15" autocomplete="off"/></td>
+</tr>
+</table> <!--f-->
+</td>
+<td>
+<!--START Passive Indicative-->
+<table> <!--g-->
+<tr><th>Indicative</th></tr>
+<tr><td><input class="lvd" type="text" name="answer25" id="frstSingPIa" size="15" autocomplete="off"/></td>
+</tr>
+<tr><td><input class="lvd" type="text" name="answer26" id="scndSingPIa" size="15" autocomplete="off"/></td>
+</tr>
+<tr><td><input class="lvd" type="text" name="answer27" id="thrdSingPIa" size="15" autocomplete="off"/></td>
+</tr>
+<tr><td height="10"><b></b></td></tr>
+<tr><td><input class="lvd" type="text" name="answer28" id="frstPlPIa" size="15" autocomplete="off"/></td>
+</tr>
+<tr><td><input class="lvd" type="text" name="answer29" id="scndPlPIa" size="15" autocomplete="off"/></td>
+</tr>
+<tr><td><input class="lvd" type="text" name="answer30" id="thrdPlPIa" size="15" autocomplete="off"/></td>
+</tr>
+</table> <!--g-->
+
+</td>
+
+<td>
+<table class="hidden" id = "show3"> <!--h-->
+<tr><th class="hide">-</th></tr>
+<tr><td><input class="lvd" type="text" name="answer31"size="15" autocomplete="off"/></td>
+</tr>
+<tr><td><input class="lvd" type="text" name="answer32" size="15" autocomplete="off"/></td>
+</tr>
+<tr><td><input class="lvd" type="text" name="answer33" size="15" autocomplete="off"/></td>
+</tr>
+<tr><td height="10"><b></b></td></tr>
+<tr><td><input class="lvd" type="text" name="answer34" size="15" autocomplete="off"/></td>
+</tr>
+<tr><td><input class="lvd" type="text" name="answer35" size="15" autocomplete="off"/></td>
+</tr>
+<tr><td><input class="lvd" type="text" name="answer36" size="15" autocomplete="off"/></td>
+</tr>
+</table> <!--h-->
+</td><td>
+<!--START Passive Subjunctive-->
+<table> <!--g-->
+<tr><th>Subjunctive</th></tr>
+<tr><td><input class="lvd" type="text" name="answer37" id="frstSingPSa" size="15" autocomplete="off"/></td>
+</tr>
+<tr><td><input class="lvd" type="text" name="answer38" id="scndSingPSa" size="15" autocomplete="off"/></td>
+</tr>
+<tr><td><input class="lvd" type="text" name="answer39" id="thrdSingPSa" size="15" autocomplete="off"showcheck();"/></td>
+</tr>
+<tr><td height="10"><b></b></td></tr>
+<tr><td><input class="lvd" type="text" name="answer40" id="frstPlPSa" size="15" autocomplete="off"/></td>
+</tr>
+<tr><td><input class="lvd" type="text" name="answer41" id="scndPlPSa" size="15" autocomplete="off"/></td>
+</tr>
+<tr><td><input class="lvd" type="text" name="answer42" id="thrdPlPSa" size="15" autocomplete="off"/></td>
+</tr>
+</table> <!--g-->
+
+</td>
+
+<td>
+<table class="hidden" id = "show4"> <!--h-->
+<tr><th class="hide">-</th></tr>
+<tr><td><input class="lvd" type="text" name="answer43"size="15" autocomplete="off"/></td>
+</tr>
+<tr><td><input class="lvd" type="text" name="answer44" size="15" autocomplete="off"/></td>
+</tr>
+<tr><td><input class="lvd" type="text" name="answer45" size="15" autocomplete="off"/></td>
+</tr>
+<tr><td height="10"><b></b></td></tr>
+<tr><td><input class="lvd" type="text" name="answer46" size="15" autocomplete="off"/></td>
+</tr>
+<tr><td><input class="lvd" type="text" name="answer47" size="15" autocomplete="off"/></td>
+</tr>
+<tr><td><input class="lvd" type="text" name="answer48" size="15" autocomplete="off"/></td>
+</tr>
+</table> <!--h-->
+</td>
+
+</tr>
+<tr>
+<td align="left" colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<// <--input type="button" name="showbutton" value="Show correct forms" onClick="showCorrectAI();" ondblclick="hideCorrectAI();"></td>
+<td align="left" colspan="2"><// <--input class="lvd" type="button" name="showbutton2" value="Show correct forms" onClick="showCorrectAS();" ondblclick="hideCorrectAS();"/></td>
+<td align="left" colspan="2"><// <--input class="lvd" type="button" name="showbutton3" value="Show correct forms" onClick="showCorrectPI();" ondblclick="hideCorrectPI();"/></td>
+<td align="left" colspan="2"><// <--input class="lvd" type="button" name="showbutton4" value="Show correct forms" onClick="showCorrectPS();" ondblclick="hideCorrectPS();"/></td>
+</tr>
+<tr>
+<td colspan="3" align="center"><input type="button" name="submit" value="submit" onClick="submit();"/>
+<td colspan="8" align="center"><input class="lvd" type="button" name="clearbutton" value="&nbsp;&nbsp;&nbsp;&nbsp;Clear&nbsp;&nbsp;&nbsp;&nbsp;" onClick="Clear();"/>
+</td>
+</tr>
+</table> <!--a-->
+</form>
+</div>
+</div>
+</div>
+</body>
+</html>

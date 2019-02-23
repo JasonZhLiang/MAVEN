@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<wicket:head>
+<script src="LCTableSizer.js"></script>
+<script src="passages.js"></script>
+</wicket:head> 
+<body>
+<wicket:extend>
+	
+		<form wicket:id="DisplayExerciseForm" name="DisplayExerciseForm" id="DisplayExerciseForm">
+		<table id="displextable"> 
+			<thead>
+			<tr>
+			<th class="small" >  </th>
+			<th class="small" >Type</th>
+			<th class="medium" >Question</th>
+			<th class="larger" >Answer</th>
+			<th class="larger" >Prof</th>
+			</tr>
+			</thead>
+				<tbody>
+					<tr wicket:id="questionListDisplay">
+					<td colspan="4">
+					<table>
+					<tr>
+					<td colspan="4"><span wicket:id="passagenote">Following questions refer to this text passage:</span>
+					<input wicket:id="addmorequestionsbutton" type="submit" value="Add Questions"/>
+					<br><label wicket:id="comments" id="comments">Comments: </label><span wicket:id="infotext">Comments</span>
+	
+					<textarea readonly wicket:id="passage" class="passagetext" cols="70" rows="5">xxx</textarea></td>
+					</tr>
+					
+					<tr>
+					<td valign="top"class="small" ><span wicket:id="qnumberlab">number</span></td>
+					<td valign="top"class="small" ><span wicket:id="qtypelab">type</span></td>
+					<td valign="top" class="large" ><span wicket:id="questlab">question</span></td>
+					<td valign="top" class="large"><span wicket:id="answerlab">answer</span></td>
+					<td valign="top" class="small"><span wicket:id="proflab">proflab</span></td>
+					<td valign="top"class="small"><input wicket:id="editlink" type="submit"  value="Edit"/></td>
+					<td valign="top"class="small"><input wicket:id="deletebutton" type="submit"  value="Delete"/>
+					<span wicket:id="confdeletebutton" id="confdeletebutton">xx</span></td>
+					</tr>
+					<tfoot><tr><td colspan="6"><span wicket:id="endpassagenote">-- End of this passage --</span></td></tr></tfoot>
+					</table>
+					</td>
+					</tr>
+					</tbody>
+			</table>
+			</form>	
+			
+		
+		<div id="exercisesLeftWrapper">
+			<div class="post">
+		<div wicket:id="feedbackmessages" id="feedbackmessagesHome"></div>
+				
+		<form wicket:id="EditExerciseForm" name="EditExerciseForm" id="EditExerciseForm">
+		
+				<h2>Add/Edit questions in an exercise</h2>
+				Exercise name:  <span class="bolded" wicket:id="exernamelab">exercise name here</span><br/>		
+				<div wicket:id="createtxtdiv">
+				Create a passage of text as a basis for questions:  
+				<input wicket:id="createtxtbutton" type="submit"  value="Create text passage"/>
+				</div>
+			<div wicket:id="textdiv" id="textdiv">
+				
+				Enter a passage of text here:<br/>
+				<textarea wicket:id="passagetext" id="passagetext" class="passagetext" onclick="this.focus()" cols="70" rows="5"></textarea><br/>				
+				<input type="button" wicket:id= "formatbutton" id="formatbutton" value="Format text"/>
+				Optional text description:  <input type="text" wicket:id="textinfotf" id="textinfotf" size="25"/><br/>
+				<label id="doubleclick">Double click on word to select. </label>	
+				<input type="text" wicket:id="strtshow" id="strtshow" value="0" size="1"/>
+				<input type="text"  id="endshow" value="0" size="1"/>
+				<input type="text" pattern="\d*" wicket:id= "qcounttf" id="qcounttf" value="0" size="1"  /><br/>
+				<input type="button" wicket:id="numbrbutton"  id="numbrbutton" value="Number word" />			
+				<input type="button" wicket:id="replbutton" id="replbutton" value="Replace with blank" />
+				<input type="button" wicket:id="reversebutton" id="reversebutton" value="Undo blank" /><br/>
+			
+				Word:  <input type="text" wicket:id="wordshow" id="wordshow" size="10" readonly/>
+				Line no.: <input type="text" pattern="\d*" wicket:id="lncntshow" id="lncntshow" size="2" style="text-align:center;" readonly />
+				Word no.:  <input type="text" pattern="\d*" wicket:id="wrdcntshow" id="wrdcntshow" size="2" style="text-align:center;" readonly/>
+		
+				
+				<!-- Enter question about this word:  <input type="text" wicket:id="fillquestiontf" id="fillquestiontf" size="20"/>	 -->
+			
+				<input wicket:id="closepassagelink" type="submit"  value="Close text passage"/>	
+						
+				</div>
+						<label wicket:id="questionType"> </label> 
+				<select wicket:id="questionchoice"></select>  
+								
+				<div wicket:id="truefalse" id="truefalse">
+				<h4>True/false question:</h4>
+				Question text: <input type="text" wicket:id="tftext" class="account request_question" placeholder = "Type in your question"  />
+	
+					Answer:
+					<span wicket:id="truefalse" >
+  						true  <input wicket:id="1" type="radio"  />
+  						false <input wicket:id="0" type="radio"  />
+					</span>
+				</div><br/>
+				
+				<div wicket:id="multichoice" id="multichoice">
+				<h4>Multiple-choice question</h4>
+					<label wicket:id="multiCountLabel"> </label>
+						<select wicket:id="multicountlist"></select> <br/>
+				
+					Question text: <input wicket:id="multiquestiontf" type="text" class="account multipleChoice_question" placeholder = "Type your question"  /> 	<br/>
+					<label>Please Select Correct Answer</label> <br/>
+
+					<table  wicket:id="radiogroup"> 
+						<tr wicket:id="classlistview">
+							<td><span wicket:id="answertext" id="answertext" >Answer:</span> </td>
+							<td><input type="text" wicket:id="multianswertf" class="account multipleChoice_answer" placeholder = "Type your answer"  /> </td>
+							<td><input type="radio" wicket:id="radioselect" id="radioselect" /><br/></td>						
+						</tr>
+					</table>
+				</div>
+				
+				<div wicket:id="multiselect" id="multiselect">
+				<h4>Multiple-choice multi-select question</h4>
+
+				<label wicket:id="multiCountLabel"> </label>
+			
+				
+				<select wicket:id="multicountlist"></select> 	<br/>						  
+					    (please check the correct answers):<br/>
+		    
+				Question text: <input wicket:id="multiquestiontf" type="text" placeholder = "Type your question" /> <label>	<br/>
+				Please Select the Correct Answers</label> <br/>
+					
+					<table  wicket:id="classlistview"> 
+						<tr>
+							<td><span wicket:id="answertext" id="answertext" >Answer:</span> </td>
+							<td><input type="text" wicket:id="multianswertf" placeholder = "Type your answer" /> </td>
+							<td><input type="checkbox" wicket:id="checkAnswer" id="checkAnswer"/><br/></td>			
+						</tr>
+					</table>			
+				</div>
+				
+				<div wicket:id="fillblank" id="fillblank">
+				<span class="bolded">Fill-in-the-blank question</span><br/>				
+				
+				Enter question about this word:  <input type="text" wicket:id="fillquestiontf" id="fillquestiontf" size="20" placeholder = "Type your question"/>
+				</div>
+				
+				<div wicket:id="listmatch" id="listmatch">
+				<h4>List-matching question</h4>
+			
+					<label wicket:id="multiCountLabel"> </label>
+						
+				<select wicket:id="multicountlist"></select> 	<br/>						  
+					    (Please enter matching pairs.  The program will scramble the second 
+				item in random patterns, different for each user and on each occasion.)<br/>
+		    		
+					<table  wicket:id="classlistview"> 
+						<tr>
+							<td><span wicket:id="answertext" id="answertext" >Answer:</span> </td>
+							<td><input type="text" wicket:id="LMQuestion" id="LMQuestion" placeholder = "Type your word" /> </td>
+							<td><input type="text" wicket:id="LMAnswer" id="LMQuestion" placeholder = "Type your match"/><br/></td>			
+						</tr>
+					</table>			
+				</div>
+				
+				
+
+				<div wicket:id="latinparsing" id="latinparsing">
+
+				<h4>Latin Parsing Question</h4>
+
+				<span id="wordinfo">About the Word Above</span><br/>				
+				<fieldset >  
+				Part of Speech:
+						<select wicket:id="pos"></select>  
+						<select wicket:id="var1"></select>
+						<select wicket:id="var2"></select>
+						<select wicket:id="var3"></select>
+						<select wicket:id="var4"></select>
+						<br><label wicket:id="lblVar"> </label>
+				<input type="text" wicket:id="Vartf" id="Vartf" name="Vartf" size="35">
+				
+				</fieldset>
+
+				</div>
+				<div wicket:id="greekparsing" id="greekparsing">
+
+				<h4>Greek Parsing Question</h4>
+
+				<span id="wordinfo">About the Word Above</span><br/>				
+				<fieldset >  
+				Part of Speech:
+						<select wicket:id="pos"></select>  
+						<select wicket:id="var1"></select>
+						<select wicket:id="var2"></select>
+						<select wicket:id="var3"></select>
+						<select wicket:id="var4"></select>
+						<select wicket:id="var5"></select>
+						<br><label wicket:id="lblVar"> </label>
+				<input type="text" wicket:id="Vartf" id="Vartf" name="Vartf" size="35">
+				</fieldset>
+
+				</div>
+				<div id="exersubmit">
+				<span wicket:id="proficspan">
+					Choose question proficiency:  
+					<select wicket:id="proficsel">
+					<option>Comprehension</option>
+					</select>
+					</span><br/>
+					<!-- <input wicket:id="addquestionbutton" id="addquestionbutton" type="submit" value="Add Question"/> -->
+					<input wicket:id="savebutton" type="submit" value="Save"/>
+					<label wicket:id="insertAfter"> </label> 
+					<select wicket:id="insertPosition"></select>
+					
+					<input wicket:id="finishbutton" type="submit" value="Finish Questions"/>
+					<input wicket:id="cancelbutton" type="submit" value="Cancel Edit"/><br/>
+										
+				</div>
+				<br/>
+				<br/>	
+					<input wicket:id="gotoListButton" type="submit"  value="Return to exercise list"/>		
+				</form>
+
+
+
+			</div> <!-- post -->
+			<br class="clearfix" />
+		</div> <!-- content -->
+	<br class="clearfix" />
+</wicket:extend>
+
+
+</body>
+</html>
+					

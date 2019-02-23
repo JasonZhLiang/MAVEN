@@ -1,0 +1,4 @@
+firstnameddc.Required=The First Name column must be selected.
+lastnameddc.Required=The Last Name column must be selected.
+emailaddressddc.Required=The Email Address column must be selected.
+SelectValidator=Drop-down control '${pick0}' and '${pick1}' cannot have the same selection.

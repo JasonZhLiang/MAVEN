@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd"
+	lang="en">
+<wicket:head>
+<script src="LCTableSizer.js"></script>
+<style>
+/* TODO: Internal Styles need to be possibly renamed and moved to external style sheet */
+#h1PageHeading {
+	padding-bottom: 20px;
+}
+#practiceInfo {
+    height: 422px;
+    /* overflow-y: scroll; */
+}
+#practiceExercises {
+    min-height: 164px;
+    overflow-y: scroll;
+}
+#practiceResults {
+    height: 164px;
+    overflow-y: scroll;
+}
+</style>
+</wicket:head>
+<body>
+<wicket:extend>
+	<form wicket:id="exeravailform">
+		<div id="practiceInfo">
+			<h1 id="h1PageHeading">Practice Exercises</h1>
+			<div id="practiceExercises">
+				<h2>Practice exercise categories:  </h2>
+				<table>
+					<thead>
+						<tr>
+							<th>Exercise name</th>
+							<th>Variable 1</th>
+							<th>Variable 2</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr wicket:id="categoriesList">
+							<td wicket:id="exercatlab">exer category</td>
+							<td><select  wicket:id="var1DDC" ></select></td>
+							<td><select  wicket:id="var2DDC" ></select></td>
+							<td><input type="submit" wicket:id="exerlink" value="Begin exercise"/></td>
+						</tr>
+					</tbody>
+				</table>		
+			</div>
+			<hr>
+			<h2>Practice exercise results</h2>
+			<div id="practiceResults">
+			  	<table>
+					<thead>
+						<tr>
+							<th>Exercise name</th>
+							<th>Variable 1</th>	
+							<th>Variable 2</th>	
+							<th>Date</th>
+							<th>Percent correct</th>
+							<th>Details</th>	
+						</tr>
+					</thead>
+					<tbody>
+						<tr wicket:id="resultsLV" id="resultsLV">
+							<td wicket:id="exername" id="exername">exer name</td>
+							<td wicket:id="var1lab"></td>
+							<td wicket:id="var2lab"></td>
+							<td wicket:id="datelab" id="datelab"></td>
+							<td wicket:id="ratiolab" id="ratiolab"></td>
+							<td wicket:id="percentlab" id="percentlab"></td>			
+							<td><input type="submit" wicket:id="chooseAssign" id="chooseAssign" value="Show detailed results"/></td>
+						</tr>
+					</tbody>
+				</table>	
+			</div>
+		</div>
+	</form>	
+</wicket:extend>
+</body>
+</html>

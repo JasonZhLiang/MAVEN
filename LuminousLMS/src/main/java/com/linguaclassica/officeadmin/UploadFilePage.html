@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<wicket:head>
+</wicket:head>
+<body>
+	<div id="wrapper">
+		<wicket:extend>
+			<div>
+				<form wicket:id="displayupload" id="displayupload">
+					<div wicket:id="uploadl" id="uploadl">
+						<br />
+					</div>
+					<p>
+						<label>Select a file (up to 1.0 MB):</label> 
+						<input wicket:id="fileUpload" class="chooser" type="file" /> 
+						<input type="submit" wicket:id="uploadfile" value="Upload and select fields" />
+					</p>
+				</form>
+			</div>
+		</wicket:extend>
+	</div>
+</body>
+</html>

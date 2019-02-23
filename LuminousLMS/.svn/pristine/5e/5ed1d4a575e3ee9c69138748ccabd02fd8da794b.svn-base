@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd"
+	lang="en">
+<wicket:head>
+<script src="LCFixedSizer.js"></script>
+<script>
+	function starve()
+	{
+		document.getElementById("feedbackmessages").style.visibility = "hidden";
+	}
+</script>
+</wicket:head>
+<wicket:extend>
+	<h1><wicket:message key="forgotpassh">forgot password</wicket:message></h1>
+	<form wicket:id="forgotpassf" id="forgotpassf" action="#">
+		<!-- <p>Please enter the information below to allow us to generate a password for your account.
+			Your password will be emailed to your email address.</p> -->
+		<p><wicket:message key="forgotpassp1">statement 1</wicket:message> <wicket:message key="forgotpassp2">statement 2</wicket:message></p>
+		<!-- <label for="whatemaili">Email address:&nbsp;&nbsp;</label> -->
+		<label for="whatemaili"><wicket:message key="forgotpasseal">email address</wicket:message></label>
+		<input type="email" class="reqemail" wicket:id="whatemaili" id="whatemaili" size="35" autofocus /><br>
+		<input class="subbutton" type="submit" id="subreset" value="reset" wicket:message="value:forgotpassb" /><br/><br/>
+	</form>
+</wicket:extend>
+</html>

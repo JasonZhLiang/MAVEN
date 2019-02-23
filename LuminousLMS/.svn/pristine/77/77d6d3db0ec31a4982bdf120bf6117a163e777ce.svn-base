@@ -1,0 +1,28 @@
+lfirstname=First name:
+llastname=Last name:
+lemail=Email address:
+lPassword= Password:
+lquestion = Security Question: 
+lanswer = Security Answer:
+lstatus=Status:
+blsave=Save
+lclientlist = List of Assigned Clients
+lconsultantlist =List of Available Consultants
+
+firstnametf.NameValidator=First name contains invalid letters or length.
+lastnametf.NameValidator=Last name contains invalid letters or length.
+firstnametf.Required=First name is required.
+lastnametf.Required=Last name is required.
+emailaddresstf.Required=Email address is required.
+emailaddresstf.StringValidator.maximum=The email address has too many characters.
+usernumbertf.StringValidator.maximum=The user number has too many characters.
+
+msgfirstnamerequired = 'First name' is required for new "%s.
+msglastnamerequired = 'Last name' is required for new "%s.
+msguseremailexists = FAILED: user with email address '%s' and with role '%s' already exists in this organization, '%s'.
+msgonsultanHasClients = Consultant %s %s still has assigned clients.\n Before changing the status - reassigned the clients
+msgClientUnassigned = Client %s %s will be unassigned until the next activation.
+msgUnassignedActiveClient = Client %s %s is active but has no Consultant assigned. Is it your intention keep this Client unassigned?
+msgConfirm = <br><br>Please click the Confirm button below to proceed with the choices made.<br>Else click the Cancel button to return to the overview.
+msgDuplicateEntry = Error:  Save failed.  Duplicate entry
+msgSaveFailedEmail = Error:  Save failed, for email '%s'. Please try again.

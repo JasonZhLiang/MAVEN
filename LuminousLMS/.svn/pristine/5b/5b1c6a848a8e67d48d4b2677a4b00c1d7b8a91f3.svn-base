@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<wicket:head>
+<script src="LCTableSizer.js"></script>
+</wicket:head>
+<body>		
+<wicket:extend>
+	<form wicket:id="userform">
+		<h1><span wicket:id="actionlabel">Action</span> <span wicket:id="userlabel">User</span></h1>
+		<label class="usercreatel"><wicket:message key="lfirstname">first name</wicket:message></label>
+		<input type="text" wicket:id="firstnametf" id="firstnametf" class="usercreatei" autofocus /><br/>
+		<label class="usercreatel"><wicket:message key="llastname">last name</wicket:message></label>
+		<input type="text" wicket:id="lastnametf" id="lastnametf" class="usercreatei" onfocus="starve()" /><br/>
+		<label class="usercreatel"><wicket:message key="lemail">email address</wicket:message></label>
+		<input type="email" wicket:id="emailaddresstf" id="emailaddresstf" class="usercreatei" onfocus="starve()" /><br/>
+	
+		<label class="usercreatel"><wicket:message key="lquestion" wicket:id="lquestion">security question</wicket:message></label>	
+		<input type="text" wicket:id="questiontf" id="questiontf" class="usercreatei" onfocus="starve()" /><br/>
+		<label class="usercreatel"><wicket:message key="lanswer" wicket:id="lanswer">security answer</wicket:message></label>	
+		<input type="text" wicket:id="answertf" id="answertf" class="usercreatei" onfocus="starve()" /><br/>
+		
+		<label class="usercreatel"><wicket:message key="lstatus">status</wicket:message></label>
+		<select wicket:id="userStatusChoice"></select> <br/><br/>
+		<input type="submit" class="subbutton" wicket:message="value:blsave" value="save" />
+		
+	
+		<div>
+			<h1><span wicket:id="avialableuserlabel">User</span></h1>
+			<div class="maxxet">
+				<table wicket:id="radiogroup">  
+					<tr wicket:id="userlistview">
+						<td>
+							<input type="radio" wicket:id="radioselect" id="radioselect" />
+							<label wicket:id="username"> </label>
+						</td>
+						<td><a href="#" wicket:id="clientname"><span wicket:id="clientlabel"></span></a></td>
+					</tr>
+				</table>
+			</div>
+		</div>	
+	</form>
+</wicket:extend>
+</body>
+</html>

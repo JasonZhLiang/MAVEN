@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd"
+	lang="en">
+<wicket:head>
+<script src="LCTableSizer.js"></script>
+</wicket:head>
+<body>
+<wicket:extend>
+	<h1>Edit/Create Exercises</h1>
+	<form wicket:id="editlistform">
+	
+		<div id="EditExercisesPage"	>
+			<h3>Available Exercises: </h3>
+
+			<table class="paneltable">
+				<thead> 
+					<tr>
+					<th>Id</th>
+					<th>Name</th>
+					<th>Comment</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr wicket:id="exerciseList">
+						<td><span wicket:id="exeridlab">exercise id</span></td>
+						<td><span wicket:id="exernamelab">exercise name</span></td>
+						<td><span wicket:id="commentlab">comment</span></td>
+						<td><a href="#" wicket:id="editbutton"><input type="button" value="Edit"/></a></td>
+						<td><a href="#" wicket:id="renameExercisebutton"><input type="button" value="Change information"/></a></td>
+						<td><a href="#" wicket:id="copybutton"><input type="button" value="Duplicate"/></a></td>
+						<td><span wicket:id="confdeletebutton" id="confdeletebutton">xx</span></td>
+						
+						
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</form>	
+	</wicket:extend>
+</body>
+</html>

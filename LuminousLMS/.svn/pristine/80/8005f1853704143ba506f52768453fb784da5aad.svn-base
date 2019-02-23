@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+
+<wicket:head>
+<script type="text/javascript" src="jQuery.js"></script>
+<script src="Bilingual.js"></script>
+</wicket:head>
+<body>
+<wicket:extend>
+<div id="innercontent">
+<span class="title" id="uploadresourcetitle">Upload Resources Page</span><br/>
+<br/>
+<form wicket:id="resourceUploadForm">
+<span id="resourcenamespan">Enter a name for the resource:  </span>  <input type="text" wicket:id="resourcename" id="resourcename"/><br/><br/>
+<input wicket:id="fileUpload" class="chooser" type="file" value="Choose file"/>
+<input type="submit" wicket:id="uploadfile" id="uploadfile" value="Upload file"/>
+
+<!--  <a href="#"  wicket:id="link" target="_blank"><img  wicket:id="whatever"></img></a>-->
+</form>
+</div>
+</wicket:extend>
+</body>
+</html>

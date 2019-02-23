@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<wicket:head>
+<script src="LCFixedSizer.js"></script>
+</wicket:head>
+<body>
+	<div id="wrapper">
+		<wicket:extend>
+			<div>
+	<h1><wicket:message key="clientassignmentshdr">assignments</wicket:message></h1>
+				<h2 wicket:id="username">user name</h2>
+				<br>
+				<div wicket:id="tree">[tree]</div>
+			</div>
+		</wicket:extend>
+	</div>
+</body>
+</html>

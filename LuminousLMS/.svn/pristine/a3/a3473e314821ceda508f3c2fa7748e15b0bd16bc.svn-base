@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd"
+	lang="en">
+<wicket:head>
+	<script src="LCFixedSizer.js"></script>
+	<script src="VideoGet.js"></script>
+	<script src="ClientVideoOperations_v1.js"></script>
+</wicket:head>
+<body>
+	<wicket:extend>
+		<div id="content">
+			<h1 style="display:inline">Client Video Page</h1>
+			<a href="#" wicket:id="tscrbutton" class="backbutton" style="float:right"><input type="button" value="Transcript"/></a>
+			<span wicket:id="videoview">video here</span>
+
+			<form wicket:id="ClientVideoForm" id="ClientVideoForm">
+				<input type="hidden" wicket:id="videocompleted" id="videocompleted"
+					maxlength="64" />
+			</form>
+		</div>
+	</wicket:extend>
+</body>
+</html>

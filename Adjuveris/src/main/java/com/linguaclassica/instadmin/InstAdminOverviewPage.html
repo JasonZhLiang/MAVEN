@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd"
+	lang="en">
+<wicket:head>
+<script src="LCTableSizer.js"></script>
+</wicket:head>
+<body>
+<wicket:extend>
+	<h1>Institution Overview</h1>
+	<form wicket:id="overviewForm">
+		<div class="maxxet">
+			<table class="termslist"> 
+				<thead>
+					<tr>
+						<th class="laterm">Term</th>
+						<th class="ladate">Start</th>
+						<th class="ladate">End</th>
+						<th class="ranumber">Classes</th>
+						<th class="ranumber">Students</th>
+						<th class="ranumber">Instructors</th>
+						<th class="ranumber">TAs</th>
+						<th class="ranumber">Assignments</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr><td colspan="8" class="hilight">Current Academic Terms</td></tr>
+					<tr wicket:id="currentList">
+						<td wicket:id="termnameLab" class="laterm">x</td>
+						<td wicket:id="startLab" class="ladate">x</td>
+						<td wicket:id="endLab" class="ladate">x</td>
+						<td wicket:id="classesLab" class="ranumber">x</td>
+						<td wicket:id="studentsLab" class="ranumber">x</td>
+						<td wicket:id="teachersLab" class="ranumber">x</td>
+						<td wicket:id="tasLab" class="ranumber">x</td>	
+						<td wicket:id="assignsLab" class="ranumber">x</td>	
+					</tr>
+					<tr><td colspan="8" class="hilight">Future Academic Terms</td></tr>
+					<tr wicket:id="newList">
+						<td wicket:id="newtermnameLab" class="laterm">x</td>
+						<td wicket:id="newstartLab" class="ladate">x</td>
+						<td wicket:id="newendLab" class="ladate">x</td>
+						<td wicket:id="newclassesLab" class="ranumber">x</td>
+						<td wicket:id="newstudentsLab" class="ranumber">x</td>
+						<td wicket:id="newteachersLab" class="ranumber">x</td>
+						<td wicket:id="newtasLab" class="ranumber">x</td>	
+						<td wicket:id="newassignsLab" class="ranumber">x</td>	
+					</tr>
+					<tr><td colspan="8" class="hilight">Past Academic Terms</td></tr>
+					<tr wicket:id="pastList">
+						<td wicket:id="pasttermnameLab" class="laterm">x</td>
+						<td wicket:id="paststartLab" class="ladate">x</td>
+						<td wicket:id="pastendLab" class="ladate">x</td>
+						<td wicket:id="pastclassesLab" class="ranumber">x</td>
+						<td wicket:id="paststudentsLab" class="ranumber">x</td>
+						<td wicket:id="pastteachersLab" class="ranumber">x</td>
+						<td wicket:id="pasttasLab" class="ranumber">x</td>	
+						<td wicket:id="pastassignsLab" class="ranumber">x</td>	
+					</tr>
+				</tbody>
+			</table>
+		</div>				
+	</form>
+</wicket:extend>
+</body>
+</html>

@@ -1,0 +1,376 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf470
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 ArialMT;\f2\fmodern\fcharset0 Courier;
+\f3\fmodern\fcharset0 Courier-Bold;}
+{\colortbl;\red255\green255\blue255;\red38\green38\blue38;\red249\green249\blue249;}
+\margl1440\margr1440\vieww25400\viewh13360\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 IJava\
+\
+Navigate to http://www.oracle.com/technetwork/java/javase/downloads/index.html and download the latest version of Java SE JDK for Mac OS X (at the time of writing, 8u92 was the latest).  When on the download page, don\'92t forget to click the \'93Accept License Agreement\'94 radio button.\
+\
+In your Downloads directory, double-click the 
+\f1 \expnd0\expndtw0\kerning0
+jdk-8u92-macosx-x64.dmg file.  This opens a window with the installer - double-click the icon to begin the installation and follow the prompts in the installation window.\
+\
+You need to set the JAVA_HOME environment variable.  Open the Terminal application and edit your ~/.bashrc file to add the following:\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f2 \cf0     JAVA_HOME=$(/usr/libexec/java_home)\
+    export JAVA_HOME\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1 \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\tqr\tx19504\pardirnatural\partightenfactor0
+\cf0 If you do not have a ~/.bashrc file, create it.  Also, check your ~/.bash_profile file for the following and add it if it is missing:\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f2 \cf0     if [ -f ~/.bashrc ]; then\
+        source ~/.bashrc\
+    fi\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1 \cf0 \
+You may also want to move other items (env vars, aliases, PATH, etc.) from your .bash_profile to your .bashrc file.\
+I\
+Before sourcing your ,.bash_profile, look at the current value of JAVA_HOME by issuing the \'91
+\f2 echo $JAVA_HOME
+\f1 \'92 command in the terminal.  It should be empty if you did not previously have this env var set.  Issue \'91
+\f2 source ~/.bash_profile
+\f1 \'92 command at the Terminal prompt to run the new scripts, then verify that $JAVA_HOME is set to something like:\
+\
+    
+\f2 \kerning1\expnd0\expndtw0 \CocoaLigature0 /Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home
+\f1 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \
+\
+\
+\
+Eclipse:\
+\
+Navigate to http://www.eclipse.org/downloads/ and download the latest version of Eclipse IDE for Java EE Developers for Mac OS X (at the time of writing, Mars.2 4.5.2 was the latest).\
+\
+In your Downloads folder, run the \cf2 \cb3 eclipse-jee-mars-2-macosx-cocoa-x86_64.tar.gz file, giving the Eclipse application executable.  If you have another version of Eclipse on your machine, rename this one to something unique and drag it to your Applications folder.\
+\
+When you run it the first time, be sure to specify a workspace different from any other version you have on your Mac.  Click the Workbench icon on the Welcome screen to start.\
+\
+\
+\
+Maven:\
+\
+Navigate to https://maven.apache.org/download.cgi and download the latest binary tar.gz archive (3.3.9 at the time of writing).\
+Using Terminal, cd to your Downloads directory (~/Downloads on my Mac), then un-tar the .tar or .tar.gz file (on my Mac Pro, the file showed up as .tar, on my MacBook Pro, it showed up as .tar.gz).\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f2 \cf2     tar -xzvf \cf0 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 apache-maven-3.3.9-bin.tar.gz\
+
+\f1   or\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f2 \cf0     tar -xvf apache-maven-3.3.9-bin.tar\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1 \cf0 \
+This creates the directory apache-maven-3.3.9 in your Downloads directory.  This needs to be moved to your /opt directory.  If you do not have one, create one, as root:\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f2 \cf0     sudo mkdir /opt\
+    sudo mv ~/Downloads/apache-maven-3.3.9 /opt\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1 \cf0 \
+You also need to set the M2 and M2_HOME env vars.  Edit your ~/.bashrc file and add the following:\
+\
+    M2_HOME=/opt/apache-maven-3.3.9\
+    export M2_HOME\
+    M2=$M2_HOME/bin\
+    export M2\
+\
+Also, add maven to your PATH env var:\
+\
+    
+\f2 PATH=\'93
+\f3\b /opt/apache-maven-3.3.9/bin:
+\f2\b0 \'85:$\{PATH\}\'94
+\f1 \
+\
+Don\'92t forget to source your .bash_profile.  Check your $PATH, $M2 and $M2_HOME before and after to confirm success.\
+\
+To confirm your maven install, cd to your HOME directory and issue \'91
+\f2 mvn -v
+\f1 \'92 command.  Expect to see something like:\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f2 \cf0 Apache Maven 3.3.9 (bb52d8502b132ec0a5a3f4c09453c07478323dc5; 2015-11-10T11:41:47-05:00)\
+Maven home: /opt/apache-maven-3.3.9\
+Java version: 1.8.0_92, vendor: Oracle Corporation\
+Java home: /Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home/jre\
+Default locale: en_US, platform encoding: UTF-8\
+OS name: "mac os x", version: "10.10.5", arch: "x86_64", family: "mac"\
+
+\f1 \
+If mvn cannot be found, check your $PATH.  It may complain about Java - check $JAVA_HOME.\
+\
+\
+\
+Subversion:\
+\
+From Eclipse main menu, click on \'93Help >> Install New Software\'85\'94.  In the Available Software window, find \'93Work with:\'94 and select \'93\'97All Available Sites\'94 from the drop-down.  Note, this can take a few minutes with \'93Pending\'94 showing in the selection area - Eclipse has not crashed.  Expand the \'93Collaboration\'94 item and click the box next to \'93Subversive SVN JDT Ignore Extensions (Optional)\'94 and \'93Subversive SVN Team Provider\'94 then click \'93Next >\'94.  In the Install Details window confirm the 2 items to be installed then click \'93Next >\'94 button.  Accept the licenses and click \'93Finish\'94 button to download and install the software.  Allow Eclipse to restart and return to the Workbench.\
+\
+Before you can download the AlpheiosPlus and LatinParser projects, you must talk to Gene to sign a Non-Disclosure Agreement and set up a userid/passwd for the SVN server.  \
+\
+Now it\'92s time to download the project files from source control.  In the Eclipse Project Explorer pane, right-click and select \'93New >> Project\'85\'94 from the pop-up menu.  In the New Project wizard, expand \'93SVN\'94 and select \'93Project from SVN\'94, then click \'93Next >\'94 to bring up the Checkout from SVN window.\
+\
+The first time you do this, a pop-up appears to download the Subversive SVN Connectors.  Select \'93SVN Kit 1.8.11 (or the latest version if different) and click \'93Finish\'94.  In the Install window, confirm that \'93Subversive SVN Connectors\'94 and \'93SVNKit 1.8.11 Implementation (Optional)\'94 are checked and click \'93Next >\'94.  Confirm the Install Details, click \'93Next >\'94, accept the licenses and click \'93Finish\'94 to start installing the software.  If the Mac squawks about unsigned content, click OK.  Allow Eclipse to restart.  Cancel the Checkout from SVN window to permit the restart.  Once Eclipse has restarted, bring up the Checkout from SVN window.  In the Project Explorer pane, right-click and select \'93New >> Project\'85\'94 from the pop-up menu.  In the New Project wizard, expand \'93SVN\'94 and select \'93Project from SVN\'94, then click \'93Next >\'94.\
+\
+In the Checkout from SVN window, enter the URL for the project:\
+\
+    LatinParser - \'93\expnd0\expndtw0\kerning0
+\CocoaLigature1 svn://linguaclassicacloud.com/root/repos/LatinParserK/trunk\'94\
+    AlpheiosPlus - \'93svn://linguaclassicacloud.com/root/repos/AlpheiosPlus/trunk"\
+\
+Check \'93Use a custom label:\'94 and enter \'93LatinParserK\'94 or \'93AlpheiosPlus\'94.  Enter the userid/passwd that you got from Gene, check the \'93Save authentication\'94 box and click \'93Next >\'94.  It squawks about normalizing URL - click No.  In the Select Resource window, ensure the \'93Head Revision\'94 option is chosen and click \'93Finish\'94.  In the Check Out As window, ensure \'93Check out as a project with the name specified\'94 is selected, enter \'93LatinParserK\'94 or \'93AlpheiosPlus\'94 as the name, ensure \'93Depth:\'94 is set to \'93Recursively\'94 and that \'93Head Revision\'94 is selected, then click \'93Finish\'94.\
+\
+It asks for password hint - set this up if you want.\
+\
+In the Project Explorer, right click on the project and select \'93Configure >> Convert to Maven Project\'85\'94 from the pop-up menu.  This can take a few minutes.  \
+\
+Right-click again, selecting \'93Maven >> Update Project\'85\'94 from the pop-up menu, ensure that only the current project is selected in the Update Maven Project window and click \'93OK\'94.  This can take a couple of minutes.\
+\
+Right-click again and select \'93Refresh\'94 from the pop-up menu.\
+\
+Repeat for AlpheiosPlus project.  In the Checkout from SVN window, be sure to create a new repository location for the new project and do not reuse any from other projects.\
+\
+\
+\
+MySQL:\
+\
+Navigate to http://dev.mysql.com/downloads/ to get the latest version of MySQL Community Server.  At the time of writing, the latest version is 5.7.13.  On the Download page, select the DMG archive for Mac OS X.  On the next page that indicates \'93Login Now or Sign Up for a free account\'94, click the \'93No thanks, just start my download\'94 under the Login/SignUp buttons.\
+\
+In the Downloads folder, run mysql-5.7.13-osx10.11-x86_64.dmg to open the package and double-click the icon in the pop-up window to launch the installer.  Accept the defaults in the installer.  Save the temporary password that appears in the pop-up window - it will be required later.\
+\
+Return to the MySQL downloads page and select MySQL Workbench.  At the time of writing, the current version is 6.3.6.  Download the Mac OS X DMG Archive, again clicking the \'93No thanks \'85\'94 to start the download.\
+\
+In the Downloads folder, run mysql-workbench-community-6.3.6-osx-x86_64.dmg.  In the Finder window it pops up, simply drag the MySQLWorkbench icon to the Applications folder.\
+\
+To start up MySQL server, open your Mac\'92s System Preferences, click the new MySQL icon and press the \'93Start MySQL Server\'94 button.  You will notice the red \'93stopped\'94 status change to a green \'93running\'94.  You can also choose to automatically start MySQL Server at computer startup - I\'92ve turned this off since I won\'92t need MySQL all the time.  To stop a running MySQL Server, click the \'93Stop MySQL Server\'94 button and note the green \'93running\'94 status changes to red \'93stopped\'94 status.\
+\
+In the Applications folder, run MySQLWorkbench.  Once it is running, double click the Local instance icon and enter the initial password that was displayed on the pop-up Connect to MySQL Server window during MySQL Server installation.  It will demand that this temporary password be changed - set it to something you can remember.  The Connect to MySQL Server window returns, enter your new passwd.\
+\
+The main MySQL Workbench window opens, allowing you to enter SQL commands, scripts and queries.  \
+\
+Returning to the MySQL downloads page, go to the MySQL Connectors download area and get the Connector/J TAR Archive.  In your Downloads folder, double-click mysql-connector-java-5.1.39.tar to unpack folder mysql-connector-java-5.1.39.  Copy the .jar file in this new folder to /Library/Java/Extensions (Terminal via sudo or Finder).  Don\'92t delete the folder from the Downloads folder as it will be required later on during Tomcat installation.\
+\
+Also, get the Connector/Python DMG Archive for the latest Mac OS X version shown (10.9 at time of writing, also works with Yosemite - 10.10) from the MySQL downloads page as it is required for MySQL Utilities.  In the Downloads folder, run mysql-connector-python-2.1.3-osx10.9.dmg and right-click Open in the pop-up Finder window to launch the installer, accepting the defaults.\
+\
+
+\b Return to the MySQL downloads page and get MySQL Utilities Mac OS X DMG Archive.  Again, the latest version is 1.5.6 for Mac OS X 10.9 which is compatible with Yosemite.  In the Downloads folder, run the DMG file and run the package file in the pop-up Finder window using right-click Open, accepting the defaults when the installer runs.  These utilities can be run from the MySQL Workbench tool.  (Error with this version, will not work with my version of OS X - install failed)\
+
+\b0 \
+In the Terminal, update your PATH env var in .bashrc to reflect MySQL:\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \kerning1\expnd0\expndtw0 \CocoaLigature0     
+\f2 PATH=\'93
+\f3\b /usr/local/mysql/bin:
+\f2\b0 \'85:$\{PATH\}\'94
+\f1 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \
+and source your .bash_profile.\
+\
+To verify that the MySQL Server is running, issue the following command in the Terminal:\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f2 \cf0     mysqladmin -u root -p version\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1 \cf0 \
+and enter the DB passwd you set in Workbench.  You should see something like:\
+\
+
+\f2 \kerning1\expnd0\expndtw0 \CocoaLigature0 mysqladmin  Ver 8.42 Distrib 5.7.13, for osx10.11 on x86_64\
+Copyright (c) 2000, 2016, Oracle and/or its affiliates. All rights reserved.\
+\
+Oracle is a registered trademark of Oracle Corporation and/or its\
+affiliates. Other names may be trademarks of their respective\
+owners.\
+\
+Server version		5.7.13\
+Protocol version	10\
+Connection		Localhost via UNIX socket\
+UNIX socket		/tmp/mysql.sock\
+Uptime:			1 hour 36 min 26 sec\
+\
+Threads: 3  Questions: 1216  Slow queries: 0  Opens: 206  Flush tables: 1  Open tables: 184  Queries per second avg: 0.210\
+
+\f1 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \
+\
+Create the users, tables and populate the tables in MySQL:\
+\
+Start MySQL Workbench if it is not already started and double-click the Local Instance icon.  The main MySQL Workbench window should be present with a tab for Query 1.  \
+\
+Set up the LatinParserK database user by typing the following in the input area of the Query 1 tab and clicking the lightning bolt icon (not the one with the I-cursor on it):\
+\
+\pard\pardeftab720\partightenfactor0
+
+\b \cf0 USE mysql; CREATE USER 'parser'@'localhost' IDENTIFIED BY 'introibo411'; GRANT ALL ON webparser.* TO 'parser'@'localhost' IDENTIFIED BY 'introibo411'; FLUSH PRIVILEGES;
+\b0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+Click the Create New SQL Tab icon at upper left (a small page showing SQL and a + sign) or select \'93File >> New Query Tab\'94 in the main menu to create a new query window and paste the following to set up the AlpheiosPlus user:\
+\
+\pard\pardeftab720\partightenfactor0
+
+\b \cf0  \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\b0 \cf0 \
+To confirm user creation, on the Management pane, click \'93Users and Privileges\'94, verifying that \'93parser\'94 and \'93alph\'94 are present.  If you performed this step after creating the first user, don\'92t forget to hit \'93Refresh\'94 after creating the second user.\
+\
+Click the Open SQL script icon at upper left (small page showing SQL and a folder, next to Create New SQL Tab icon) to open up the LatinParserK DQL scripts, which opens a standard file selection window.  Navigate to Documents/<Eclipse workspace>/LatinParserK/src/main/scripts and select create_tables.sql.  This opens the script in its own tab.  Make sure nothing in the window is selected then click the lightning bolt icon to execute.\
+\
+Alternately, this can be done from the command line in Terminal.  Launch MySQL client using:\
+\
+    
+\f2 mysql -u root -p
+\f1 \
+\
+and enter the DB passwd you set up via MySQL Workbench.  In Eclipse, expand Project LatinParserK src/main/scripts and double-click create_tables.sql to open the script.  Select all, copy and paste into the Terminal window where mysql is running.  \
+\
+I do suggest using MySQL Workbench instead of mysql CLI for running these scripts for two reasons - Workbench halts script execution on error and the Action Output window has red, yellow, green error, warning, success icons to make it easy to identify items that need to be investigated.  On the CLI, the script does not halt on error so you need to scroll back to see if anything interesting happened.  \
+\
+**** ERRORS **** Tables text, grktext and annottext cannot be created because of a problem with the definition of column textenteredtime \'93textenteredtime TIMESTAMP NOT NULL\'94:\
+\
+
+\f2 \kerning1\expnd0\expndtw0 \CocoaLigature0     ERROR 1067 (42000): Invalid default value for 'textenteredtime'\expnd0\expndtw0\kerning0
+\CocoaLigature1 \
+
+\f1 \
+This error occurs whether performed via MySQL Workbench or mysql CLI.  It is strange because the column definition immediately preceding this one also uses \'93TIMESTAMP NOT NULL\'94 and does not trigger an error.  Other tables (i.e. users) also use \'93TIMESTAMP NOT NULL\'94 and are successfully created.  I can also create the table text via CLI if I omit the textenteredtime column.  It is interesting to note that the 3 tables that fail are the only ones in the script that have two \'93TIMESTAMP NOT NULL\'94 columns - the others only have one.  It can be corrected by specifying a DEFAULT value for those second TIMESTAMP columns:\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f2 \cf0     textenteredtime TIMESTAMP NOT NULL DEFAULT '2015-01-01 00:00:00'\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1 \cf0 \
+\
+Repeat whichever process you chose for populate_tables.sql and metrics_create_tables.sql.  If using MySQL Workbench, you can Select All in the Action/Output pane and right-click Clear to clean up output from the previous script so errors are more apparent.\
+\
+Follow the same process to create the tables and data for the AlpheiosPlus project.  Scripts are in the Eclipse workspace at AlpheiosPlus src/main/scripts and are:\
+\
+    create_tables(0).sql\
+    populate_basic_tables(1).sql\
+    create_assign_pronoundrill_exercises(2).sql\
+    populate_test_data_table(3).sql\
+    populate_test_data_for_uncooked_exercises(4).sql\
+\
+Once done, open MySQL Workbench and on the Schemas pane expand webparser >> Tables to see the LatinParserK tables and alphplus >> Tables to see the AlpheiosPlus tables.\
+\
+\
+Tomcat:\
+\
+Navigate to https://tomcat.apache.org/download-70.cgi and download the tar.gz version of Tomcat.  The current version as of the time of writing is 7.0.69.  Tomcat seems to have ties to Servlet, JSP and EL specs and the Lingua Classica instructions for the other OSs specify Tomcat 7 so I recommend Tomcat 7 here as well.\
+\
+In the Downloads folder, double-click the apache-tomcat-7.0.69.tar (or tar.gz) file creating the apache-tomcat-7.0.69 folder.  Move this folder to /opt; use sudo if performing this operation via Terminal.\
+\
+In Terminal, set up the CATALINA_HOME env var in .bashrc as follows:\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f2 \cf0     CATALINA_HOME=/opt/apache-tomcat-7.0.69\
+    export CATALINA_HOME\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1 \cf0 \
+Set up a symbolic link to /Library/Tomcat (remove the old one first if /Library/Tomcat exists):\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f2 \cf0     sudo ln -s /opt/apache-tomcat-7.0.69 /Library/Tomcat\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1 \cf0 \
+Startup Tomcat server:\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f2 \cf0     /Library/Tomcat/bin/startup.sh\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1 \cf0 \
+Confirm Tomcat server startup by navigating to http://localhost:8080 in your browser.  If Tomcat is running, you will see a Tomcat page.\
+\
+Stop Tomcat server, as you will be starting/stopping via Eclipse:\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f2 \cf0     /Library/Tomcat/bin/shutdown.sh\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1 \cf0 \
+Finally, copy mysql-connector-java-5.1.39-bin.jar from ~/Downloads/mysql-connector-java-5.1.39 to /opt/apache-tomcat-7.0.69/lib using either Finder or Terminal.\
+\
+\
+\
+Tomcat/Eclipse Integration:\
+\
+In the bottom pane on Eclipse, if there is no Servers tab, click \'93Window >> Show View >> Other\'94 from the main menu, expand Server and select Servers.\
+\
+Select the Servers tab, right-click \'93New >> Server\'94.  For server type, expand Apache, select \'93Tomcat v7.0 server\'94 and click \'93Next >\'94.  Enter the Tomcat installation directory /opt/apache-tomcat-7.0.69, select the JRE corresponding to the Java version you installed, then click \'93Finish\'94.  \
+\
+Right-click the Tomcat v7.0 server and select Start.  The status should go from Stopped to Started, Synchronized.  If you want to shut down the server, right-click the server and select Stop.  If you have trouble starting the server, use Terminal to check for any running instances of Tomcat server:\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f2 \cf0     ps -ef | grep -i tomcat\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1 \cf0 \
+If any are running, you will see something like:\
+\
+
+\f2 \kerning1\expnd0\expndtw0 \CocoaLigature0 Scott-Campbells-Mac-Pro:bin scott$ ps -ef | grep -i tomcat\
+  501 
+\f3\b 94219
+\f2\b0      1   0  1:13am ttys002    0:06.49 /Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home/bin/java -Djava.util.logging.config.file=/opt/
+\f3\b apache-tomcat
+\f2\b0 -7.0.69/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.endorsed.dirs=/opt/apache-tomcat-7.0.69/endorsed -classpath /opt/apache-tomcat-7.0.69/bin/bootstrap.jar:/opt/apache-tomcat-7.0.69/bin/tomcat-juli.jar -Dcatalina.base=/opt/apache-tomcat-7.0.69 -Dcatalina.home=/opt/apache-tomcat-7.0.69 -Djava.io.tmpdir=/opt/apache-tomcat-7.0.69/temp org.apache.catalina.startup.Bootstrap start\
+  501 94222   418   0  1:14am ttys002    0:00.00 grep -i tomcat\
+
+\f1 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \
+Note the process id (PID), in this case 94219 and issue the following command:\
+\
+    sudo kill <PID>\
+    ps -ef | grep -i tomcat\
+\
+You should now see that the tomcat process is no longer running.  If it won\'92t die, use 
+\f2 kill -9
+\f1  on the PID.\
+\
+\
+Test run:\
+\
+For LatinParserK project, in Eclipse click \'93Project >> Clean\'85\'94 from the main menu and ensure only LatinParserK is checked (use \'93Clean projects selected below\'94 radio button) and press OK.\
+\
+Right-click on LatinParserK project, select \'93Run As >> Run on Server\'94 from the pop-up menu and select \'93Tomcat v7.0 Server at localhost\'94 then click \'93Finish\'94.  Allow the server to be restarted.\
+\
+You should see a Lingua Classica Cloud tab appear with the LatinParserK\'92s homepage.\
+\
+\
+For AlpheiosPlus, I saw a problem with some files importing java.nio modules.  Right-click on the AlpheiosPlus project and select \'93Properties\'94 from the pop-up menu.  Under Java Build Path, click the Libraries tab, select JRE System Library [JavaSE-1.6] and click \'93Add Library\'85\'94 button.  In the Add Library window, select JRE System Library, click \'93Next >\'94, select \'93Workspace default JRE (Java SE 8 [1.8.0_92]) and hit \'93Finish\'94.  You should see this JRE System Library added to the Java Build Path.  Select the JavaSE-1.6 one and Remove it.  The NIO problems go away.  \
+\
+Clean and Run the AlpheiosPlus project on the Tomcat server.  You should see the project\'92s homepage appear in a new tab in Eclipse.\
+\
+}

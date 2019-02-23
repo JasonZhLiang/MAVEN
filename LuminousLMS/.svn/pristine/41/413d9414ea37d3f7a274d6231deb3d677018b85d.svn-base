@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<wicket:head>
+<script src="LCFixedSizer.js"></script>
+</wicket:head>
+<body>
+	<wicket:extend>
+	<form wicket:id="createmessageform">
+		<h1><wicket:message key="createl">create/send Message</wicket:message></h1>
+ 		<label wicket:id="clientsddl" class="createmsgl">select:</label>
+		<select wicket:id="clientsdd" id="clientsdd" autofocus></select><br/>
+		<label class="createmsgl"><wicket:message key="subjectl">subject:</wicket:message></label>
+		<input type="text" wicket:id="subjecttf" id="subjecttf" size="50" />
+		(50 <label wicket:id="subjectcharlimitl">char limit</label>)<br/>
+		<label class="createmsgl"><wicket:message key="messagel">message:</wicket:message></label>
+		<textarea wicket:id="messageta" id="messageta" rows="10" cols="60"></textarea>
+		(511 <label wicket:id="messagecharlimitl">char limit</label>)<br/>
+		<input type="submit" class="subbutton" value="send" wicket:message="value:sendb" /><br/><br/>
+	</form>
+</wicket:extend>
+</body>
+</html>

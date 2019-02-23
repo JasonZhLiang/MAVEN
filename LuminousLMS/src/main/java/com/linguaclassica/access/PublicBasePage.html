@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+<meta name="description" content="Luminous LMS. A software-as-a-service application designed to support employment centres." />
+<meta name="author" content="Eugene Price"/>
+<meta name="copyright" content="Lingua Classica, copyright &copy; 2017. All rights reserved."/>
+<meta name="keywords" content="employment, client, consultant, office manager, Lingua Classica,  
+self-instruction, education, self-learning, software, 'study aid'">
+
+<title>LuminousLMS</title>
+
+<link rel="stylesheet" type="text/css" href="site.css" />
+<link rel="shortcut icon" href="alphtransfavicon.ico">
+<wicket:header-items/>
+</head>
+<body>
+	<div id="wrapper">
+		<div id="leftnav">
+			<div id="logo"><img src="LMSLogo.png" alt="Luminous LMS logo"/></div>
+			<div id="navmenu">
+				<div wicket:id="navBar" id="navBar"></div>
+			</div>
+			<div id="footer">
+				Copyright &copy; 2017 Lingua Classica<br>
+				<wicket:message key="footrights">all rights reserved</wicket:message><br> 
+				<wicket:message key="foothost">hosted by</wicket:message><a href="https://www.viviotech.net/" id="viviotechnologies" target="blank">Vivio Technologies</a>.
+			</div>
+		</div>
+		<div id="page">
+			<div wicket:id="feedbackmessages" id="feedbackmessages"></div>
+			<div class="post" id="main">
+				<wicket:child />
+			</div>
+		</div>
+	</div>
+</body>
+</html>

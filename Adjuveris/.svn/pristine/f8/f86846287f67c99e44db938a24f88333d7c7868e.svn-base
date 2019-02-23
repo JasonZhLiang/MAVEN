@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd"
+	lang="en">
+<wicket:head>
+<script src="LCFixedSizer.js"></script>
+<script src="jQuery.js"></script>
+<script src="DatetimePicker.js"></script>
+<script src="jquery-ui.js"></script>
+<script src="jquery-ui-timepicker-addon.js"></script>
+<link rel="stylesheet" type="text/css" href="jquery-ui.css" />
+<link rel="stylesheet" type="text/css" href="jquery-ui-timepicker-addon.css" />
+<script>
+	function starve()
+	{
+		document.getElementById("feedbackmessages").style.visibility = "hidden";
+	}
+</script>
+</wicket:head>
+<body>
+<wicket:extend>
+	<h1><span wicket:id="noteaction">action</span></h1>
+	<form wicket:id="tenoticef">
+		<label id="notiflabel">Notification content</label><br>
+		<textarea wicket:id="notificationtext" rows="3" cols="60" onfocus="starve()"></textarea><br><br>
+		<label>Select classes/groups as notification addressees:</label><br>
+		<span wicket:id="classcheckboxes" id="classcheckboxes" class="inline"></span><br><br>
+		<label class="manualcreatel">Start date</label><input wicket:id="starttimefield"  id="startdatepicker"  type="text"></input><br>
+		<label class="manualcreatel">End date</label><input wicket:id="endtimefield" id="enddatepicker" type="text"></input><br><br>
+		<input type="submit" class="subbutton" value="Create Notification"/><br>
+	</form>
+</wicket:extend>
+</body>
+</html>

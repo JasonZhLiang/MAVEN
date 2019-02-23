@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd"
+	lang="en">
+<wicket:head>
+<script src="LCTableSizer.js"></script>
+</wicket:head>
+<body>
+	<wicket:extend>
+<div class="maxxet">
+		<div wicket:id="noassignment" id="noassignment">
+			<br/><br/>
+			<h3>No assignments for this class have yet been completed.</h3>
+		</div>
+		<div wicket:id="aggregateAssignmentResults" id="aggregateAssignmentResults">
+			<span wicket:id="classname">Class name</span><br/>
+			<h3>Aggregate Assignment Results: </h3>
+			<span wicket:id="classnametitle" class="bolded">Class name</span><br/>
+			<table id="aggregateAssignmentResultsTable">
+					<tr>
+						<td id="resultsAssignmentLab"><span class="bolded">Assignment Name</span></td>
+						<td id="resultsDueDateLab"><span class="bolded">Date</span></td>
+						<td id="resultsStudentCountLab"><span class="bolded">Student Count</span></td>
+						<td id="resultsAverageLab"><span class="bolded">Overall average</span></td>
+						<td id="resultsStandardLab"><span class="bolded">Standardized?</span></td>
+					</tr>
+			</table>
+			<table id="aggregateAssignmentResultsInnerTable">
+				<tr wicket:id="assignmentList" id="assignmentList">
+					<td wicket:id="assignname" id="assignname">assignment</td>
+					<td wicket:id="datelab" id="datelab">date</td>
+					<td wicket:id="studentcountlab" id="studentcountlab">student count</td>
+					<td wicket:id="averagelab" id="averagelab">average</td>
+					<td wicket:id="standardlab" id="standardlab">standardized</td>
+				</tr>						
+			</table>
+		</div>		
+</div>
+	</wicket:extend>
+</body>
+</html>

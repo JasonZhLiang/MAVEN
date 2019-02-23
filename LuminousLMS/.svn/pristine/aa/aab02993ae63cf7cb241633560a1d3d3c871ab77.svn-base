@@ -1,0 +1,5 @@
+consultantclientshdr=Clients
+consultantclientshelp1=- select <b>'+'</b> next to client name to display assignment list
+consultantclientshelp2=- select <b>'+'</b> next to an assignment name to display assignment segments
+consultantclientshelp3=- select <b>'+'</b> next to an assignment segment to display usage records
+consultantclientshelp4=- select <b>'client name'</b> to edit the assignment list for the client

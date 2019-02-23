@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+
+<wicket:head>
+<script type="text/javascript" src="jQuery.js"></script>
+<script src="Bilingual.js"></script>
+</wicket:head>
+<body>
+<wicket:extend>
+<div id="innercontent">
+<span class="title" id="uploadresourcetitle">Display Image Page</span><br/>
+<br/>
+<img wicket:id="imageview"/>
+</div>
+</wicket:extend>
+</body>
+</html>

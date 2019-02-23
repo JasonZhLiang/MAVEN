@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd"
+	lang="en">
+<head>
+</head>
+<body>
+	<wicket:panel>
+		<h1>
+			<span wicket:id="titlelabel">[title]</span> for term: 
+			<select wicket:id="selectterm" id="selectterm" class="manualcreatei" required>
+				<option>option 1</option>
+				<option>option 2</option>			
+			</select>
+		</h1>
+	</wicket:panel>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	   		http://www.springframework.org/schema/beans/spring-beans.xsd
+	   		http://www.springframework.org/schema/context
+	   		http://www.springframework.org/schema/context/spring-context.xsd">
+	   		
+	   		<!--  Commented out until REST controller needed
+			http://www.springframework.org/schema/mvc 
+			http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+ 			-->
+ 
+ 	<!-- Indicate which package to scan for beans -->
+	<context:component-scan base-package="com.linguaclassica" />
+ 
+	<!--  Commented out until REST controller needed 	
+	<mvc:annotation-driven /> 
+ 	-->
+ 
+ 	<!-- Import ORM / JPA dependencies -->
+	<import resource="datasource-context.xml" />
+	
+	<!-- below is an experiment, so far no good but no harm 1 JUL 15-->
+	<bean class="org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor" />
+	
+</beans>

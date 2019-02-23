@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<wicket:head>
+	<script src="LCTableSizer.js"></script>
+<style>
+table {
+    width: 100%;
+    border: 1px solid #000000;
+}
+
+th {
+  background-color: #afa8a8;
+  border: 1px solid #999;
+  padding: 0.25rem;
+  #padding: 0px;
+  text-align: left;
+}
+td {
+  border: 1px solid #999;
+  padding: 0.25rem;
+  #padding: 0px;
+  text-align: left;
+}
+th.fromHdr,th.toHdr {
+  width:100px;
+}
+th.fromtoHdr {
+  width:90px;
+}
+th.dateHdr {
+  width:150px;
+}
+th.msgHdr {
+  width:250px;
+}
+td {
+  #font-family: "Times New Roman", Georgia, Serif;
+  font-family: Serif;
+  font-size:smaller;
+}
+tr.frombackground {
+   background-color: #fff;
+}
+tr.tobackground {
+   background-color: #ccc;
+}
+tr.newfrombackground {
+   background-color: #fff;
+   font-weight: bold;
+}
+</style>
+</wicket:head>
+<body>
+	<wicket:extend>
+		<h1><wicket:message key="messageshdr">messages</wicket:message></h1>
+		<div wicket:id="nonemessage">
+			<label><wicket:message key="nomessages"></wicket:message></label>
+		</div>
+		<div wicket:id="tree">[tree]</div>
+	</wicket:extend>
+</body>
+</html>

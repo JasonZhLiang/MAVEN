@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd"
+	lang="en">
+<wicket:head>
+<script src="LCTableSizer.js"></script>
+<style>
+/* TODO: Internal Styles need to be possibly renamed and moved to external style sheet */
+#maincharts {
+    height: 422px;
+    /* overflow-y: scroll; */
+}
+#assignmentsTable {
+    height: 253px;
+    overflow-y: scroll;
+}
+table, tr, th, td {
+	border: 1px solid black;
+	border-collapse: collapse;
+	padding-left: 10px;
+	padding-right: 10px;
+	text-align: left;
+}
+thead, tbody { 
+	/* display: block; */ 
+}
+thead {
+	background-color: lightslategray;
+}
+
+tbody {
+    height: 246px;       /* Just for the demo          */
+    overflow-y: auto;    /* Trigger vertical scroll    */
+    overflow-x: hidden;  /* Hide the horizontal scroll */
+}
+
+#h1PageHeading {
+	padding-bottom: 20px;
+}
+</style>
+</wicket:head>
+<body>
+	<wicket:extend>
+
+	<div id="maincharts">
+		<h1 id="h1PageHeading">Proficiencies</h1>
+
+		<div id="studdonex">
+	  	  <br/>
+		  <h2>Completed assignments:</h2>
+		  <br/>
+			<div id="assignmentsTable">
+				<table>
+					<thead>
+						<tr>
+							<th class="groupColsmall">Number</th>
+							<th class="groupColbig">Due date</th>
+							<th class="groupCol">Vocabulary</th>
+							<th class="groupCol">Syntax</th>
+							<th class="groupCol">Inflection</th>
+							<th class="groupCol">Comprehension</th>
+							<th class="groupCol">Score</th>
+							<th>% Correct</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr wicket:id="proficiencyList">
+							<td class="groupColsmall" wicket:id="idlab" id="idlab">id</td>
+							<td class="groupColbig" wicket:id="duedate" id="duedate">id</td>
+							<td class="groupCol" wicket:id="proficiency1" id="proficiency1">VOCABULARY</td>
+							<td class="groupCol" wicket:id="proficiency2" id="proficiency2">SYNTAX </td>
+							<td class="groupCol" wicket:id="proficiency3" id="proficiency3">INFLECTIONS </td>
+							<td class="groupCol" wicket:id="proficiency4" id="proficiency4">COMPREHENSION </td>
+							<td class="groupCol" wicket:id="ratiolab" id="ratiolab">ratio</td>
+							<td class="groupCol" wicket:id="percentlab" id="percentlab">percent</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>	
+			
+	</div>
+	</wicket:extend>
+</body>
+</html>

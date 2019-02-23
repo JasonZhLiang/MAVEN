@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd"
+	lang="en">
+<wicket:head>
+<script src="LCTableSizer.js"></script>
+</wicket:head>
+<body>
+<wicket:extend>
+	<h1>Notifications</h1>
+	<div>
+		<h2>Assignments</h2>
+		<form wicket:id="studentAssignments">
+			<div class="maxxet">
+				<table class="termslist">
+					<thead>
+						<tr>
+							<th class="laclass">Class</th>
+							<th class="laannouncement">Assignment</th>
+							<th class="ladatet">Start Date</th>
+							<th class="ladatet">Due Date</th>
+							<th class="assigngotd"></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr wicket:id="assignList">
+							<td class="laclasses" wicket:id="assignclassnameLab">classname</td>
+							<td class="laannouncement" wicket:id="assignLab">assignment</td>
+							<td class="ladatet" wicket:id="assstartLab">startdate</td>
+							<td class="ladatet" wicket:id="assdueLab">duedate</td>
+							<td class="assigngotd"><input type="submit" wicket:id="gotoExercise" value="Start" /></td>
+						 </tr>
+					</tbody>
+				</table>
+			</div>
+		</form>
+	</div>
+	<div>
+		<h2>Announcements</h2>
+		<form wicket:id="studentAnnouncements">
+			<div class="maxxet">
+				<table class="termslist">
+					<thead>
+						<tr>
+							<th class="laclass">Class</th>
+							<th class="laannouncement">Announcement</th>
+							<th class="ladatet">Start Date</th>
+							<th class="ladatet">End Date</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr wicket:id="notifList">
+							<td class="laclasses" wicket:id="notifclassnameLab">classname</td>
+							<td class="laannouncement" wicket:id="notifLab">assignment</td>
+							<td class="ladatet" wicket:id="annstartLab">startdate</td>
+							<td class="ladatet" wicket:id="anndueLab">duedate</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</form>
+	</div>
+</wicket:extend>
+</body>
+</html>

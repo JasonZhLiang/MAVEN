@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd"
+	lang="en">
+<wicket:head>
+<script src="LCTableSizer.js"></script>
+</wicket:head>
+<style>
+thead, th {
+        background-color: lightslategray;
+}
+</style>
+<body>
+<wicket:panel>
+  <div id="detailedExerciseResults">
+	<form wicket:id="LandingForm" id="LandingForm">
+		<div class="welcome">
+			<h2>Detailed, question-by-question results for:</h2>
+			<br>
+			<b>Student:</b> <span wicket:id="namelab" id="namelab">first</span><span wicket:id="lstnamelab" id="lstnamelab">last</span> (<span wicket:id="studidlab">student id</span>)<br> 
+			<b>Exercise:</b> <span wicket:id="exeridlab" id="exeridlab" >exercise identifier</span><br>
+			<b>Results:</b> <span wicket:id="correctlab" id="correctlab">correct count</span> correct 
+			among <span wicket:id="listlenlab" id="listlenlab"> number of questions</span> questions, 
+			or <span wicket:id="percentlab" id="percentlab">percentage</span>% correct.<br>
+			<br>
+		</div>
+	<div id="resultsscroll">
+		<table>
+			<thead>
+				<tr>
+					<th>Number</th>
+					<th>Question Type</th>
+					<th>Question</th>
+					<th>Correct Answer</th>
+					<th>Your Answer</th>
+					<th>Proficiency</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr wicket:id="questionlist" id="questionlist">
+					<td class="groupCol" wicket:id="qnumber" id="qnumber">question number</td>
+					<td class="groupCol" wicket:id="questiontype">question type</td>
+					<td class="groupCol" wicket:id="question" id="question">question</td>
+					<td class="groupCol" wicket:id="correctanswer" id="correctanswer">correct</td>
+					<td class="groupCol" wicket:id="studentanswer" id="result">answer entered</td>
+					<td class="groupCol" wicket:id="proficiency" id="proficiency">proficiency</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	</form>
+  </div>	
+</wicket:panel>
+</body>
+</html>

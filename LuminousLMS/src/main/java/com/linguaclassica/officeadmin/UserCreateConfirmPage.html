@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<wicket:head>
+	<script src="LCFixedSizer.js"></script>
+	<link rel="stylesheet" type="text/css" href="site.css" />
+</wicket:head>
+<body>
+<wicket:extend>
+	<form wicket:id="userform">
+		<h1><span wicket:id="actionlabel">Action</span> <span wicket:id="userlabel">User</span></h1>
+		<label class="usercreatel"><wicket:message key="lfirstname">First name:</wicket:message></label>
+		<input type="text" wicket:id="firstnametf" id="firstnametf" class="usercreatei" autofocus /><br/>
+		<label class="usercreatel"><wicket:message key="llastname">Last name:</wicket:message></label>
+		<input type="text" wicket:id="lastnametf" id="lastnametf" class="usercreatei" onfocus="starve()" /><br/>
+		<label class="usercreatel"><wicket:message key="lemail">Email address:</wicket:message></label>
+		<input type="email" wicket:id="emailaddresstf" id="emailaddresstf" class="usercreatei" onfocus="starve()" /><br/>
+		
+		<label class="usercreatel"><wicket:message key="lstatus">status</wicket:message></label>
+		<select wicket:id="userStatusChoice"></select> <br/><br/>
+	
+		<div>
+			<h1><span wicket:id="avialableuserlabel">User</span></h1>
+			<table wicket:id="radiogroup">  
+				<tr wicket:id="userlistview">
+				<td>
+					<input type="radio" wicket:id="radioselect" id="radioselect" />
+					<label wicket:id="username"> </label>
+				</td>						
+				</tr>
+		</table>
+			</div>	
+			
+		<br>
+		<div id="createconfirm">
+			<label wicket:id="confirmmsg"></label>
+			<a href="#" wicket:id="backbutton" class="backbutton" style="margin-left:40%"><input type="button" value="Cancel"/></a>
+			<input type="submit" class="subbutton" wicket:message="value:blsave" value="Confirm" />
+		</div>	
+		
+	</form>
+</wicket:extend>
+</body>
+</html>

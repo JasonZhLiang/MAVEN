@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd"
+	lang="en">
+<wicket:head>
+<script src="LCTableSizer.js"></script>
+</wicket:head>
+<body>
+	<wicket:extend>
+		<div wicket:id="termpanel" id="termpanel">term select panel goes here</div>
+		<div id="notif"	>
+			<span wicket:id="classcheckboxes" id="classcheckboxes"class="inline"></span><br>
+			<span id="backlink" wicket:id="classesSelected">text here</span><br/>
+			<span id="overallAverage" wicket:id="overallAverage">text here</span><br/>
+			<span id="previousAverage" wicket:id="previousAverage">text here</span>
+		<!-- <form wicket:id="PanelForm"> -->
+			<h3>Class assignments: </h3>
+			<div class="maxxet">
+			<table class="paneltable"> 
+				<tbody>
+					<tr wicket:id="classnameList">
+						<td><span class="bolded" wicket:id="classnamelab">classname</span>
+					      <a href="#" wicket:id="classresultsbutton">
+                          	<span class="buttonlook">Class results</span></a>				
+						<br/>
+						<table class="innertable">
+						<tr wicket:id="userlist">
+							<td class="rowmarker">- </td>
+							<td>
+								<span wicket:id="firstnamelab">first name</span>
+								<span wicket:id="lastnamelab">last name</span>								
+							</td>
+							<td><a href="#" wicket:id="resultsbutton">
+								<input type="button" value="Results"/></a>
+							</td>
+						</tr>
+						</table>
+						</td>
+					</tr>
+					<tr id="notificationList">
+						<td id="noteLab">End of class list.</td>		
+					</tr>
+				</tbody>
+			</table>
+			</div>		
+		<!--  </form>-->
+		</div>
+</wicket:extend>
+</body>
+</html>

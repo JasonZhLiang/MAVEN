@@ -1,0 +1,25 @@
+changeheader=My Account
+lemail=Email address
+loldPassword=Current password
+lnewPassword=New password
+lnewcPassword=Confirm new password
+lquestion = Security Question:
+lanswer = Security Answer:
+bsubmit=Update
+
+emailaddr.Required=The Email address is required.
+currentpassword.Required=The current password is required in order to change your account settings.
+currentpassword.PasswordValidator=Incorrect format for current password. Use 6 to 20 letters or digits.
+newpassword.PasswordValidator=Incorrect format for new password. Use 6 to 20 letters or digits.
+confirmpassword.PasswordValidator=Incorrect format for confirmation password. Use 6 to 20 letters or digits.
+confirmpassword.EqualInputValidator=The New Password and the Confirm New Password inputs must be identical.
+
+exunknown=Enter correct current password!
+exnoalgorith=New password encryption failed. Please try again.
+exnullp=Validation failure. Please enter your new password.
+exfailedupdate=Failed to update your account.
+exemailexists=Failed to update email address.  Entered email address is already used.
+
+updatedepmsg=Your email address and password have been updated.
+updatedemsg=Your email address has been updated.
+updatedpmsg=Your password has been updated.

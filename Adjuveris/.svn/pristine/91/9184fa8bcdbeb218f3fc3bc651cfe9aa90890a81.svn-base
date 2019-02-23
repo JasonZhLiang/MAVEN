@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd"
+	lang="en">
+<wicket:head>
+<script src="LCTableSizer.js"></script>
+</wicket:head>
+<body>
+<wicket:extend>
+	<h1 wicket:id="usertypeh">Users</h1>
+	<h2 wicket:id="termnameh">term</h2>
+	<form wicket:id="userslistform">
+		<table class="termslist">
+			<thead>
+				<tr>
+					<th class="lasinglename">First name</th>
+					<th class="lasinglename">Last name</th>
+					<th class="raemailaddr">Email address</th>
+					<th class="rausercode" wicket:id="usercodeh">user code</th>
+					<th></th>
+					<th></th>
+				</tr>
+			</thead>
+		</table>
+		<div class="maxxet">
+			<table class="termslist">
+				<tbody>
+					<tr wicket:id="useritem">
+						<td wicket:id="firstnamet" class="lasinglename">name here</td>
+						<td wicket:id="lastnamet" class="lasinglename">name here</td>
+						<td wicket:id="emailt" class="raemailaddr">email here</td>
+						<td wicket:id="usercodet" class="rausercode">code here</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</form>
+</wicket:extend>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd"
+	lang="en">
+<wicket:head>
+<script src="validateSelectsForm.js"></script>
+<script src="LCTableSizer.js"></script>
+</wicket:head>
+<body>
+<wicket:extend>	
+<form wicket:id="fileform" onsubmit="return validateSelects()">
+<h3>Generate new <span wicket:id="userlabel">User</span> list from .csv file</h3>
+<h4>For term name:  <span wicket:id="termnamelab">text here</span></h4>
+<h5>Contents of .csv file you uploaded are shown below.  Please identify the column number for each <span wicket:id="userlabel">User</span>-list field.</h5>
+First name column:
+<select wicket:id="firstnameddc" id="firstnameddc" autofocus>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+</select>
+
+Last name column:
+<select wicket:id="lastnameddc" id="lastnameddc">
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+</select>
+
+Email address column:
+<select wicket:id="emailaddressddc" id="emailaddressddc">
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+</select>
+
+<span wicket:id="codelabel">Codetyoe</span> code column:
+<select wicket:id="usercodeddc" id="usercodeddc">
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+</select>
+<h5>Then just click the button below to save the new <span wicket:id="userlabel">User</span> list to the database.</h5>
+<input type="submit" value="Save or add to list"/>
+<div class="maxxet">
+<table>
+<thead>
+	<tr>
+	<th>column 1</th>
+	<th>column 2</th>
+	<th>column 3</th>
+	<th>column 4</th>
+	<th>column 5</th>
+	<th>column 6</th>
+	<th>column 7</th>
+	<th>column 8</th>
+	<th>column 9</th>
+	<th>column 10</th>
+	</tr>
+</thead>
+<tbody>
+<tr wicket:id="lineslist">
+<td wicket:id="col1lab"></td>
+<td wicket:id="col2lab"></td>
+<td wicket:id="col3lab"></td>
+<td wicket:id="col4lab"></td>
+<td wicket:id="col5lab"></td>
+<td wicket:id="col6lab"></td>
+<td wicket:id="col7lab"></td>
+<td wicket:id="col8lab"></td>
+<td wicket:id="col9lab"></td>
+<td wicket:id="col10lab"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</form>
+</wicket:extend>
+</body>
+</html>

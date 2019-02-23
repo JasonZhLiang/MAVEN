@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd"
+	lang="en">
+<wicket:head>
+<script src="LCFixedSizer.js"></script>
+<script type="text/javascript" src="jQuery.js"></script>
+<script src="Bilingual.js"></script>
+ <link rel="stylesheet" href="jquery-ui.css">
+<script src="jquery-ui.js"></script>
+
+<script type="text/javascript" src="fullcalendar.ext.js"></script>
+<script type="text/javascript" src="fullcalendar.js"></script>
+
+<style>
+	#calendar {
+		position:relative;
+		
+		max-width: 560px;
+		margin: 0 auto;
+	}
+
+</style>
+
+
+
+</wicket:head>
+<body onload="showAlert();">
+<wicket:extend>
+	<h1 wicket:id="coverviewhl">common overview</h1>
+	<div id="centrepage">
+		 <div wicket:id="calendar" class="fc fc-unthemed fc-ltr"></div>
+		 
+			<h2><wicket:message key="assignedhdr">Incomplete Assignments</wicket:message></h2>
+			    <br>
+			    <div wicket:id="tree">[tree]</div>
+			    <br>
+		<div wicket:id="otherrectraining">
+			<h2><wicket:message key="orectrainehdr">other recommended training</wicket:message></h2>
+			Sample resume<br/>
+			Useful links<br/>
+		</div>
+	</div>
+	<div id="rightpage">
+		<div id="officenotes">
+			<h2><wicket:message key="offnotehdr">office notifications</wicket:message></h2>
+			<table>
+				<tr>
+					<th><wicket:message key="offnotestartl">start</wicket:message></th>
+					<th><wicket:message key="offnoteendl">end</wicket:message></th>
+					<th><wicket:message key="offnoticel">notice</wicket:message></th>
+				</tr>
+				<tr class="covmsg" wicket:id="noticeview">
+					<td wicket:id="startime">start</td>
+					<td wicket:id="endingtime">end</td>
+					<td wicket:id="noticemsg">notice</td>
+				</tr>
+			</table>
+		</div>
+		<div class="messaget">
+			<h2 wicket:id="covermessgeshl">messages</h2>
+			<wicket:enclosure child='messageview'>
+				<table>
+					<tr>
+						<th><label><wicket:message key="froml">from</wicket:message></label></th>
+						<th><label><wicket:message key="subjectl">subject</wicket:message></label></th>
+						<th><label><wicket:message key="createdatel">createdate</wicket:message></label></th>
+					</tr>
+					<tr class="covmsg" wicket:id="messageview">
+						<td class="covmsg" wicket:id="from">from</td>
+						<td class="covmsg" wicket:id="subject">subject</td>
+						<td class="covmsg" wicket:id="createdate">createdate</td>
+					</tr>
+				</table>
+			</wicket:enclosure>
+			<label wicket:id="nomsgs">no message</label>
+		</div>
+	</div>
+</wicket:extend>
+</body></html>

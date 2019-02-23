@@ -1,0 +1,16 @@
+leditnotification= Edit Notification
+lviewnotification= View Notification
+lcreatenotification= Create Notification
+lsubject = Subject
+lnotification= Notification
+lstart = Start:
+lend = End:
+lallday = All Day
+lnoncalendar = General non-calendar event
+blsave=Save
+msgchoosetime = You must choose a start time and an end time
+msgsubjectempty = Subject field is empty
+msgsnotificationempty = Notification content is empty
+msgendbeforestart1 = End date cannot be before Start date
+msgstartinpast = The Start date can not be set in the past
+msgendbeforestart2 = The End date is set before the Start date

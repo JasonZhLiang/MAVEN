@@ -1,0 +1,15 @@
+footrights=All rights reserved
+foothost=Hosted by&nbsp;
+
+forgotpassh=Forgot Password
+forgotpassp1=Please enter the information below to allow us to generate a password for your account.
+forgotpassp2=Your password will be emailed to your email address.
+forgotpasseal=Email address
+forgotpassmsg=A new password may have been sent to the entered email address.
+forgotpassb=Reset
+
+forgotpassnotreg=This email address is not registered with Employment Services
+
+sendsubjectforgot=Resetting your password
+sendtextforgot1=Use the following password to gain access to your account:
+sendtextforgot2=We suggest that you create a password of your choosing by logging on and selecting the 'My Account' menu.

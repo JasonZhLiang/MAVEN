@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<wicket:head>
+<script src="LCFixedSizer.js"></script>
+</wicket:head>
+<body>
+	<div id="wrapper">
+		<wicket:extend>
+			<div>
+				<form wicket:id="assignmentsf" id="assignmentsf">
+					<h1><span wicket:id="clientname" id="messagel"></span></h1>
+					<br>
+					<h2><wicket:message key="assignmentlisthdr">assignment list</wicket:message>:</h2>
+					<span wicket:id="choices"></span>
+					<br>
+					<input class="subbutton" type="submit" id="subform" value="Update" wicket:message="value:bupdate" /><br>
+				</form>
+			</div>
+		</wicket:extend>
+	</div>
+</body>
+</html>

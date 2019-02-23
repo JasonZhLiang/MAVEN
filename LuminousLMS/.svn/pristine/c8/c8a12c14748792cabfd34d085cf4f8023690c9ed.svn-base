@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+
+
+<wicket:head>
+<script type="text/javascript" src="jQuery.js"></script>
+<script src="Bilingual.js"></script>
+<script src="LCFixedSizer.js"></script>
+
+<!-- <style>
+table {
+	width: 80%;
+}
+td, th {
+    text-align: left;
+    border-bottom: 1px solid black;
+    border-collapse: collapse; 
+}
+#titleth th {
+	width: 60%;
+}
+#viewth th {
+	width: 20%;
+}
+#transcriptth th {
+	width: 20%;
+}
+
+</style>
+ -->
+
+</wicket:head>
+<body>
+<wicket:extend>
+<h1><wicket:message key="trainingmaterialshdr">assignments</wicket:message></h1>
+<div>
+<br>
+<h2><wicket:message key="lassisted">Assisted</wicket:message>:</h2>
+<div wicket:id="assistedtree">[tree]</div>
+
+<br>
+<h2><wicket:message key="lother">Other</wicket:message>:</h2>
+<div wicket:id="othertree">[tree]</div>
+
+</div>
+</wicket:extend>
+</body>
+</html>

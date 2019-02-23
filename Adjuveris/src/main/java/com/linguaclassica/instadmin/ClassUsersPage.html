@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd"
+	lang="en">
+<wicket:head>
+<script src="LCFixedSizer.js"></script>
+</wicket:head>
+<body>
+<wicket:extend>
+	<h1>Edit <span wicket:id="userlabel">User</span> List for Class</h1>
+	<br><b>class: </b><span wicket:id="classlabel"></span>
+	<br><b>term:  </b><span wicket:id="termlabel"></span>
+	<h4>Select <span wicket:id="userlabel">User</span>/s for this class:</h4>
+	<form wicket:id="editclassusersform">
+			<span wicket:id="userchecks"></span>
+			<br>
+		<input type="submit" wicket:id="saveclassbutton" value="Save class/changes"/> 
+	</form>
+</wicket:extend>
+</body>
+</html>

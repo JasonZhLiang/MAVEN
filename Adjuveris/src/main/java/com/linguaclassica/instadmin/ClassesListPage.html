@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd"
+	lang="en">
+<wicket:head>
+<script src="LCTableSizer.js"></script>
+</wicket:head>
+<body>
+<wicket:extend>
+	<h1>Classes</h1>
+	<form wicket:id="classlistform">
+		<div class="maxxet">
+			<table class="termslist">
+				<thead>
+					<tr>
+						<th class="laterm">Term</th>
+						<th class="laclass">Class name</th>
+						<th class="laclass">Class code</th>
+						<th class="ebutton">&nbsp;&nbsp;&nbsp;&nbsp;</th>
+						<th class="ebutton">&nbsp;&nbsp;&nbsp;&nbsp;</th>
+						<th class="lafullname">Teacher</th>
+						<th class="lafullname">TAs</th>
+						<th class="ranumber">Students</th>
+						<th class="ebutton">&nbsp;&nbsp;&nbsp;&nbsp;</th>
+						<th class="ebutton">&nbsp;&nbsp;&nbsp;&nbsp;</th>
+						<th class="ebutton">&nbsp;&nbsp;&nbsp;&nbsp;</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr><td colspan="8" class="hilight">Current Academic Terms:</td></tr>
+					<tr wicket:id="currentList">
+						<td wicket:id="currenttermLab" class="laterm">t</td>
+						<td wicket:id="currentclassnameLab" class="laclass">c</td>
+						<td wicket:id="currentclasscodeLab" class="laclass">c</td>
+						<td class="ebutton"><input type="submit" wicket:id="currenteditclass" value="Edit" /></td>
+						<td class="ebutton"><input type="submit" wicket:id="currentdeleteclass" value="Delete" /></td>
+						<td wicket:id="currentteachernameLab" class="lafullname">te</td>
+						<td wicket:id="currenttanameLab" class="lafullname">ta</td>
+						<td wicket:id="currentstudentLab" class="ranumber">text</td>
+						<td class="ebutton"><input type="submit" wicket:id="currenteditteachersclass" value="Teachers" /></td>
+						<td class="ebutton"><input type="submit" wicket:id="currentedittasclass" value="TAs" /></td>
+						<td class="ebutton"><input type="submit" wicket:id="currenteditstudentsclass" value="Students" /></td>
+					</tr>
+					<tr><td colspan="8" class="hilight">Future Academic Terms:</td></tr>
+					<tr wicket:id="newList">
+						<td wicket:id="newtermLab" class="laterm">t</td>
+						<td wicket:id="newclassnameLab" class="laclass">c</td>
+						<td wicket:id="newclasscodeLab" class="laclass">c</td>
+						<td class="ebutton"><input type="submit" wicket:id="neweditclass" value="Edit" /></td>
+						<td class="ebutton"><input type="submit" wicket:id="newdeleteclass" value="Delete" /></td>
+						<td wicket:id="newteachernameLab" class="lafullname">te</td>
+						<td wicket:id="newtanameLab" class="lafullname">ta</td>
+						<td wicket:id="newstudentLab" class="ranumber">text</td>
+						<td class="ebutton"><input type="submit" wicket:id="neweditteachersclass" value="Teachers" /></td>
+						<td class="ebutton"><input type="submit" wicket:id="newedittasclass" value="TAs" /></td>
+						<td class="ebutton"><input type="submit" wicket:id="neweditstudentsclass" value="Students" /></td>
+					</tr>
+					<tr><td colspan="8" class="hilight">Past Academic Terms:</td></tr>
+					<tr wicket:id="pastList">
+						<td wicket:id="pasttermLab" class="laterm">t</td>
+						<td wicket:id="pastclassnameLab" class="laclass">c</td>
+						<td wicket:id="pastclasscodeLab" class="laclass">c</td>
+						<td class="ebutton"></td>
+						<td class="ebutton"></td>
+						<td wicket:id="pastteachernameLab" class="lafullname">te</td>
+						<td wicket:id="pasttanameLab" class="lafullname">ta</td>
+						<td wicket:id="paststudentLab" class="ranumber">text</td>
+						<td class="ebutton"></td>
+						<td class="ebutton"></td>
+						<td class="ebutton"></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</form>
+</wicket:extend>
+</body>
+</html>

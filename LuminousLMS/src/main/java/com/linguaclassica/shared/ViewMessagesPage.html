@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<wicket:head>
+	<script src="LCTableSizer.js"></script>
+<style>
+table {
+  border-collapse: collapse;
+}
+
+td, th {
+  border: 1px solid #999;
+  padding: 0.25rem;
+  #padding: 0px;
+  text-align: left;
+}
+th.fromHdr,th.toHdr {
+  width:100px;
+}
+th.subjHdr {
+  width:200px;
+}
+th.dateHdr {
+  width:150px;
+}
+th.statusHdr {
+  width:65px;
+}
+td {
+  #font-family: "Times New Roman", Georgia, Serif;
+  font-family: Serif;
+  font-size:smaller;
+}
+tr.hdrbackground {
+   background-color: #afa8a8;
+}
+tr.frombackground {
+   background-color: #ccc;
+}
+tr.tobackground {
+   background-color: #fff;
+}
+tr.tobackgroundunread {
+   background-color: #fff;
+   font-weight: bold;
+}
+td.unreadfont {
+}
+</style>
+</wicket:head>
+<body>
+	<wicket:extend>
+		<h1><wicket:message key="messageshdr">messages</wicket:message></h1>
+		<div class="maxxet">
+		<label wicket:id="vmselectuserl" class="createmsgl">select:</label>
+		<select wicket:id="vmselectuser" id="vmselectuser" autofocus></select><br/>
+
+			<table>
+			  <thead>
+				<tr class="hdrbackground">
+					<th class="fromHdr"><label><wicket:message key="froml">from</wicket:message></label></th>
+					<th class="toHdr"><label><wicket:message key="tol">from</wicket:message></label></th>
+					<th class="dateHdr"><label><wicket:message key="createdatel">creation date</wicket:message></label></th>
+					<th class="subjHdr"><label><wicket:message key="subjectl">subject</wicket:message></label></th>
+					<th><label><wicket:message key="messagel">message</wicket:message></label></th>
+					<th class="statusHdr"><label><wicket:message key="statusl">status</wicket:message></label></th>
+				</tr>
+			  </thead>
+			  <tbody>
+				<tr wicket:id="messageview">
+					<td wicket:id="from">from</td>
+					<td wicket:id="to">to</td>
+					<td wicket:id="createdate">createdate</td>
+					<td wicket:id="subject">subject</td>
+					<td wicket:id="message">message</td>
+					<td wicket:id="status">status</td>
+				</tr>
+			  </tbody>
+			</table>
+		</div>
+	</wicket:extend>
+</body>
+</html>

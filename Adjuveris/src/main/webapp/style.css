@@ -1,0 +1,367 @@
+body {
+	background-color:#e0e0e0;
+}
+
+#wrapper {
+	position:relative;
+	margin-top: 20px;//top:20px;
+	width:1200px;
+	//height:600px;
+	margin-left:auto;
+	margin-right:auto;
+	background-color:white;
+	border-right:solid 2px gray;
+	border-bottom:solid 2px gray;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+#leftouter {
+	position:relative;
+	top:0;
+	left:0;	
+	width:300px;
+	height:590px;	
+}
+
+#leftnav {
+	position:relative;
+	float: left;
+	top:0;
+	left:0;	
+	width:150px;
+	height:590px;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+	background-color:LightSlateGray;
+	padding-top:10px;
+	padding-right:10px;
+	padding-bottom: 10px;
+	padding-left:10px;
+	color:white;
+}
+
+#leftnav a {
+	color: yellow; //white;
+	text-decoration:none;
+}
+
+#ident {
+	position: relative; //absolute;
+	//top:70px;
+	//height:30px;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-left:10px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:0.70em;
+	//margin-left:10px;	
+}
+
+#navbarmenu {
+	position:relative;
+	left:120px;
+	width:150px;
+	height:150px;
+	background-color:LightSlateGray;
+	color:white;
+	margin-left:0;
+	padding-top:5px;
+	padding-left: 5px;
+	z-index:3;
+}
+
+ul.menu {
+	list-style-type: none;
+	padding: 0;
+}
+
+li.menu {
+	font-family:"Arial Black", Gadget, sans-serif;
+	font-size:1.00em;
+	padding-bottom:15px;
+	color: purple;
+} 
+
+div.menu li {
+	font-family:"Arial Black", Gadget, sans-serif;
+	font-size:0.70em;
+	color: blue;
+} 
+
+
+#footer {
+	position: absolute;
+	top:520px;
+	padding-top: 10px;
+	padding-left:10px;
+	padding-right: 10px;
+	//padding-bottom: 10px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:0.70em;
+	color: white;
+}
+
+#footer a {
+	color:white;
+}
+
+#leftcontent {
+	position:absolute;
+	top:10px;
+	left:180px;
+	width:460px;
+	height:540px;
+	border: solid 1px black;
+	padding:20px;
+}
+
+#rightcontent {
+	position:absolute;
+	top:10px;
+	left:690px;
+	width:460px;
+	height:540px;
+	border: solid 1px black;
+	padding:20px;
+}
+
+#outercontent {
+	margin: 20px 0 0 170px;
+	padding: 10px;
+}
+
+#fullcontent {
+	position:absolute; 
+	top:0;
+	left:170px;
+	width:990px;
+	height:567px;
+	background-color:white;
+	margin: 0;
+	border: solid 1px black;
+	padding:20px;
+	color:black;
+}
+
+#innercontent {
+	position:relative;
+	top:0;
+	left:0;
+	width:960px;
+	height:540px;
+	padding:20px;
+	color:black;
+	overflow-y:auto;
+}
+
+#fullcontent a {
+	color:black;
+}
+
+h1 {
+	font-size: 1.5em;
+	margin: 0 0 0.25em 0;
+}
+
+span.title {
+	font-weight:bold;
+	font-size:1.20em;
+}
+
+span.subtitle {
+	font-weight:bold;
+	font-size:1.00em;
+}
+
+span.menuhead {
+	font-family:"Arial Black", Gadget, sans-serif;
+	font-weight:bold;
+	font-size:0.80em;
+	padding-left:20px;
+}
+
+td {
+	padding-right:20px;
+}
+
+#notifications {
+	position:absolute;
+	top:120px;
+	left:160px;
+	width:150px;
+	background-color:LightSlateGray;
+	color:white;
+	z-index:7;
+	padding-top:5px;
+}
+
+#exercises {
+	position:absolute;
+	top:155px;
+	left:160px;
+	width:150px;
+	background-color:LightSlateGray;
+	color:white;
+	z-index:7;
+	padding-top:5px;
+}
+
+#tassignments {
+	position:absolute;
+	top:185px;
+	left:160px;
+	width:200px;
+	background-color:LightSlateGray;
+	color:white;
+	z-index:7;
+	padding-top:5px;
+}
+
+#tgroups {
+	position:absolute;
+	top:215px;
+	left:160px;
+	width:200px;
+	background-color:LightSlateGray;
+	color:white;
+	z-index:7;
+	padding-top:5px;
+}
+
+/*instadmin divs below*/
+
+#acadterms {
+	position:absolute;
+	top:145px;
+	left:160px;
+	width:200px;
+	background-color:LightSlateGray;
+	color:white;
+	z-index:7;
+	padding-top:5px;
+}
+
+#people {
+	position:absolute;
+	top:200px;
+	left:160px;
+	width:200px;
+	background-color:LightSlateGray;
+	color:white;
+	z-index:7;
+	padding-top:5px;
+}
+
+#iaresults {
+	position:absolute;
+	top:235px;
+	left:160px;
+	width:200px;
+	background-color:LightSlateGray;
+	color:white;
+	z-index:7;
+	padding-top:5px;
+}
+
+#iaprofic {
+	position:absolute;
+	top:270px;
+	left:160px;
+	width:200px;
+	background-color:LightSlateGray;
+	color:white;
+	z-index:7;
+	padding-top:5px;
+}
+
+#adminacct {
+	position:absolute;
+	top:310px;
+	left:160px;
+	width:200px;
+	background-color:LightSlateGray;
+	color:white;
+	z-index:7;
+	padding-top:5px;
+}
+
+#page {
+	position:absolute;
+	top:0;
+	left:170px;
+	width:990px;
+	height:565px;
+	background-color:white;
+	border: solid 1px black;
+	padding:20px;
+	z-index:2;
+}
+
+#login {
+	position: relative;
+	top:100px;
+	left:250px;
+	width:400px;
+	background-color:lightgray;
+	padding:30px;
+}
+
+#login input.logtext {
+	position:absolute;
+	left:140px;
+}
+
+#login input.fltright {
+	float:right;
+}
+
+#login a.fltright {
+	position:relative;
+	float:right;
+	text-decoration:underline;
+	font-weight:bold;
+}
+
+#login a.nav {
+	font-size:0.80em;
+}
+
+#loginhead {
+	font-weight:bold;
+	font-size:1.20em;
+	text-align:center;
+}
+	
+#notif {
+	position:absolute;
+	left:170px;
+	top:90px;
+	width:150px;
+	height:150px;
+	z-index:2;
+	background-color:LightSlateGray;
+	color:white;
+	padding:5px;
+} 
+
+#practiceExercisesAssignPage{
+	style="width: 600px;
+	height: 250px;
+	overflow-y: scroll;
+}
+
+#h1PageHeading {
+	padding-bottom: 20px;
+}
+
+#practiceInfo {
+    height: 422px;
+    /* overflow-y: scroll; */
+}
+
+}
+
+}

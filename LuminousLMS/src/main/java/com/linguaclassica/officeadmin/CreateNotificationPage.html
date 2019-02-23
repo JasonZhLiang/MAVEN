@@ -1,0 +1,61 @@
+<!-- saved from url=(0022)http://internet.e-mail -->
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<wicket:head>
+<script src="LCFixedSizer.js"></script>
+
+<script src="jQuery.js"></script>
+<script src="DatetimePicker.js"></script>
+<script src="jquery-ui.js"></script>
+<script src="jquery-ui-timepicker-addon.js"></script>
+<script type="text/javascript">
+<!--	jQuery(document).ready(function() {
+        jQuery("#allday_checkbox").click(function () {
+        	$('#startdatepicker').datepicker(this.checked ? "disable" : "enable");
+        	$('#enddatepicker').datepicker(this.checked ? "disable" : "enable");
+        	
+		});
+    }); --------->
+</script>
+
+<link rel="stylesheet" type="text/css" href="jquery-ui.css" />
+<link rel="stylesheet" type="text/css" href="jquery-ui-timepicker-addon.css" />
+
+</wicket:head>
+<body>
+<wicket:extend>
+	<form wicket:id="notificationform">
+		<h1><span wicket:id="notificationlabel"></span></h1>
+		<label class="usercreatel"><wicket:message key="lsubject">Subject</wicket:message></label><br>
+		<input type="text" wicket:id="subjecttf" id="subjecttf" size="80" placeholder = "Type in subject"/><br/>
+		<label class="usercreatel"><wicket:message key="lnotification">Notification</wicket:message></label><br>
+		
+		<textarea wicket:id="notificationtext" rows="3" cols="60" placeholder = "Type in notification"></textarea>
+		<br>   	
+		<table>
+			<tr>
+				<td>
+					<label ><wicket:message key="lstart">Start:</wicket:message></label>
+					<input wicket:id="starttimefield"  id="startdatepicker"  type="text"></input></td>				
+				<td>
+					<input type="checkbox"  wicket:id="allday" id="allday_checkbox" checked/>
+					<label><wicket:message key="lallday">All Day</wicket:message></label>
+				</td>
+			</tr>
+			<tr>
+				<td> 
+					<label><wicket:message key="lend">End:</wicket:message></label>&nbsp;
+				    <input wicket:id="endtimefield" id="enddatepicker" type="text"></input></td>
+				<td>
+					<input type="checkbox"  wicket:id="generalinformation" id="generalinformation"/>
+					<label><wicket:message key="lnoncalendar">General non-calendar event</wicket:message></label><br/>
+				</td>		
+			</tr>
+		</table>
+		<input type="submit" class="subbutton" wicket:id="submitbutton" wicket:message="value:blsave" value="Save" />
+		<input type="button" wicket:id="deletebutton" value="Delete"/>
+	</form>
+</wicket:extend>
+</body>
+</html>
+

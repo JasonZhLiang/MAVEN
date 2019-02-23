@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd"
+	lang="en">
+<wicket:head>
+<script src="LCTableSizer.js"></script>
+</wicket:head>
+<body>
+<wicket:extend>
+	<h1>Class announcements</h1>
+	<form wicket:id="teacherAssignments">
+		<span wicket:id="classcheckboxes" id="classcheckboxes"class="inline"></span><br>
+		<div class="maxxet">
+			<table class="termslist">
+				<thead>
+					<tr>
+						<th class="laclass">Class(es)</th>
+						<th class="laannounce">Announcement</th>
+						<th class="ladatet">Start date</th>
+						<th class="small">TZ</th>
+						<th class="ladatet">End date</th>
+						<th class="small">TZ</th>
+						<th></th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr wicket:id="notlist">
+						<td class="laclasses" wicket:id="classnamelab">classname</td>
+						<td class="laannounce" wicket:id="notiflab">notification</td>
+						<td class="ladatet" wicket:id="startdatelab">start date</td>
+						<td class="small" wicket:id="starttimezonelab">timezone</td>
+						<td class="ladatet" wicket:id="enddatelab">end date</td>
+						<td class="small" wicket:id="endtimezonelab">timezone</td>
+						<td class="ebutton"><input type="submit" wicket:id="editnotice" id="editnotice" value="Edit"/></td>
+						<td><span wicket:id="confdeletenotice" id="confdeletenotice">xx</span></td>							
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</form>
+	<!-- 
+	<div id="innercontent">
+	<span class="title">Teacher Notifications Page</span><br/>
+	<form id="notifform">
+	<span class="subtitle">Classes:</span>
+	<br/>
+	<span class="subtitle">Notifications:</span>
+	</form>
+	</div>
+	 -->
+</wicket:extend>
+</body>
+</html>

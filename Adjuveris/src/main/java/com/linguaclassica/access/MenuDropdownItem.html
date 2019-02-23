@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+    <title></title>
+
+</head>
+<body>
+
+<script>
+    Wicket.Event.add(window, 'domready', function(event) {
+      alert("here"):
+    });
+  </script>
+<wicket:panel id="item">
+	<div class="dropdown" wicket:id="itemContainer" id="itemContainer">
+        <a href="#" id="dropdown" class="dropdown-toggle" data-toggle="dropdown">
+            <span wicket:id="label" id="label"></span>
+ 			<b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+            <li wicket:id="itemLinks"></li>
+        </ul>
+    </div>
+
+</wicket:panel>
+
+</body>
+</html>
+

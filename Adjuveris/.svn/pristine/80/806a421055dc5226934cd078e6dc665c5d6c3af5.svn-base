@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd"
+	lang="en">
+<wicket:head>
+<script src="LCTableSizer.js"></script>
+</wicket:head>
+<body>
+<wicket:extend>
+	<h1>User Count by Academic Term</h1>
+	<form wicket:id="userscountform">
+		<table class="termslist">
+			<thead>
+				<tr>
+					<th class="laterm">Term name</th>
+					<th class="ranumber">User count</th>
+					<th></th>
+				</tr>
+			</thead>
+		</table>
+		<div class="maxxet">
+			<table class="termslist">
+				<tbody>
+					<tr wicket:id="termitem">
+						<td wicket:id="termnameLab" class="laterm">term here</td>
+						<td wicket:id="usercountLab" class="ranumber">count here</td>
+						<td><input type="submit" wicket:id="viewlink" value="View" /></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</form>
+</wicket:extend>
+</body>
+</html>

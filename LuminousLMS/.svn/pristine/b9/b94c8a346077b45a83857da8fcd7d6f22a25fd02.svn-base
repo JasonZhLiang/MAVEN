@@ -1,0 +1,9 @@
+oaclientsshdr=Clients
+selectl=Sélectionner
+selectfroml=Sélectionnez - à partir de l'année
+monthl=mois
+toyearl=à l'année
+oaclientshelp1=- sélectionner <b>'+'</b> à côté du nom du client pour afficher la liste des clients
+oaclientshelp2=- sélectionner <b>'+'</b> à côté du nom du client pour afficher la liste d'assignation
+oaclientshelp3=- sélectionner <b>'utilisateur prénom'</b> pour modifier les détails de l'utilisateur
+oaclientshelp4=- sélectionner <b>'nom du client'</b> assigner un client   

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd"
+	lang="en">
+<wicket:head>
+<script src="LCFixedSizer.js"></script>
+<style>
+th {
+	background-color: black;
+	color: white;
+}
+tr, td, th {
+    text-align: left;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+tr:nth-child(even){background-color: lightblue;}
+tr:nth-child(odd){background-color: white;}
+tr:hover {background-color: blue; color: yellow;}
+</style>
+</wicket:head>
+<body>
+<wicket:extend>
+	<form wicket:id="useruploadform">
+		<h1>Upload a <span wicket:id="userlabel">User</span> list as a .csv file</h1>
+		<br/>
+		<label class="manualcreatel">Academic term:</label>
+		<select wicket:id="selectterm" id="selectterm" class="manualcreatei" required>
+			<option>option 1</option>
+			<option>option 2</option>			
+		</select>
+
+		<p>
+		<label>Select file :</label>
+		<input wicket:id="fileUpload" class="chooser" type="file"/>
+		<input type="submit" wicket:id="uploadfile" value="Upload and select fields"/>
+		</p>
+	</form>
+</wicket:extend>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<wicket:head>
+<script src="LCFixedSizer.js"></script>
+</wicket:head>
+<body>
+	<div id="wrapper">
+		<wicket:extend>
+			<h1><wicket:message key="consultantclientshdr">assignments</wicket:message></h1>
+			<div>
+				<div id="howTo" style="border:thin solid black;display:inline-block;padding:10px;margin:20px;background-color:lightgray;">
+				<wicket:message key="consultantclientshelp1">click1help</wicket:message><br>
+				<wicket:message key="consultantclientshelp2">click2help</wicket:message><br>
+				<wicket:message key="consultantclientshelp3">click2help</wicket:message><br>
+				<wicket:message key="consultantclientshelp4">click3help</wicket:message>
+				</div>
+				<br>
+				<div wicket:id="tree">[tree]</div>
+			</div>
+		</wicket:extend>
+	</div>
+</body>
+</html>

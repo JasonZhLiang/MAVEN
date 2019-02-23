@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="author" content="Eugene Price"/>
+<meta name="copyright" content="Lingua Classica, 2012.  All rights reserved."/>
+<meta name="keywords" content="Latin, Lingua Classica, noun, drill, language, learning, reading, 
+self-instruction, education, self-learning,software, parse, construe, grammar, syntax, 'study aid'">
+<title>Lingua Classica Latin Noun Drill</title>
+<script type="text/javascript" src="NounDrill.js"></script>
+<script type="text/javascript" src="jQuery.js"></script>
+<script type="text/javascript" src="doubleSel.js"></script>
+<script type="text/javascript" src="jquery.doubleSelect.js"></script>
+<script src="../ValidateDrillForm.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" type="text/css" />
+<link rel="shortcut icon"  href="../LCfavicon.ico">
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body onLoad="getParams();"> <!-- onLoad="ajaxFunction('noundrill');"> -->
+
+<div id="wrapper">
+	<div id="header">
+		<div id="logo">
+			<img src="../images/logoLC-Red-243x70trans.png" alt="logo" />
+		</div>
+		<div id="title"><h2>Latin Noun Drill</h2></div>
+		<div id="menu">
+			<ul></ul>
+		</div>
+	</div>
+
+
+<div id="page-dr">
+
+<br/>
+<form id="checkform" name="checkform" method="post" action="#" onsubmit="return validateForm()">
+
+<h4>Latin Noun Drill</h4>
+<p>
+Choose a declension and then a noun. Then enter the correct gender word, by number and case, into
+the text boxes provided. The most common variants are used (applies mostly to Greek nouns).
+</p>
+<div id="declens">
+	Choose a declension:<br/>
+	<select id="declension" class="double" name="declension" size="9" onChange="clearOpt();">
+		<option value="">--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+		<!-- <option value="First">--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+		<option value="Second">--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+		<option value="Third">--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+		<option value="Third i-stem">--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+		<option value="Fourth">--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+		<option value="Fifth">--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+		<option value="Irregular">--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+		<option value="Greek first">--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+		<option value="Greek second">--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option> -->
+	</select>
+</div>
+<div id="wrd">
+	Choose a noun:<br/>
+	<select id="word" size="9" onChange="goSel();">
+		<option value="">--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+	</select>
+</div>
+<div id="nountable">
+<table>
+	<tr>
+		<th class="drilllab"></th>
+		<th class="drillin">Singular</th>
+		<th class="drillgap"></th>
+		<th id="pluralt" class="drillin visual">Plural</th>
+	</tr>
+	<tr>
+		<td>Nominative:</td>
+		<td><input type="text" name="answer1" id="nomaS" size="10" class="reqdrillword" autocomplete="off"/></td>
+		<td></td>
+		<td><input type="text" name="answer6" id="nomaP" size="10" class="drillholder" autocomplete="off"/></td>
+	</tr>
+	<tr>
+		<td>Genitive:</td>
+		<td><input type="text" name="answer2" id="genaS" size="10" class="reqdrillword" autocomplete="off"/></td>
+		<td></td>
+		<td><input type="text" name="answer7" id="genaP" size="10" class="drillholder" autocomplete="off"/></td>
+	</tr>
+	<tr>
+		<td>Accusative:</td>
+		<td><input type="text" name="answer3" id="accaS" size="10" class="reqdrillword" autocomplete="off"/></td>
+		<td></td>
+		<td><input type="text" name="answer8" id="accaP" size="10" class="drillholder" autocomplete="off"/></td>
+	</tr>
+	<tr>
+		<td>Dative:</td>
+		<td><input type="text" name="answer4" id="dat_aS" size="10" class="reqdrillword" autocomplete="off"/></td>
+		<td></td>
+		<td><input type="text" name="answer9" id="dat_aP" size="10" class="drillholder" autocomplete="off"/></td>
+	</tr>
+	<tr>
+		<td>Ablative:</td>
+		<td><input type="text" name="answer5" id="ablaS" size="10" class="reqdrillword" autocomplete="off"/></td>
+		<td></td>
+		<td><input type="text" name="answer10" id="ablaP" size="10" class="drillholder" autocomplete="off"/></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><input type="button" name="clearbutton" value="Clear" onclick="return clearEdits();"/></td>
+		<td></td>
+		<td></td>
+	</tr>
+</table>
+<input type="submit" value="Submit"/>
+</div>
+<div class="hidden">
+
+<input type="text" name="exercisename" id="LatinNounDrill" value="LatinNounDrill"/>
+<input type="text" name="exerciseid" id="exerciseid"/>
+<input type="text" name="variable1" id="variable1"/>
+<input type="text" name="var1string" id="var1string"/>
+<input type="text" name="variable2" id="variable2"/>
+<input type="text" name="var2string" id="var2string"/>
+<input type="text" name="assignmentid" id="assignmentid"/>
+<input type="text" name="classid" id="classid"/>
+<input type="text" name="assignmentstatus" id="assignmentstatus" value=""/>
+</div>
+</form>
+</div>
+</div>
+</body>
+</html>

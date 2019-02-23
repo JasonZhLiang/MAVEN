@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd"
+	lang="en">
+<wicket:head>
+<script src="LCFixedSizer.js"></script>
+<script>
+	function starve()
+	{
+		document.getElementById("feedbackmessages").style.visibility = "hidden";
+	}
+</script>
+</wicket:head>
+<wicket:extend>
+	<h1><wicket:message key="changeheader">my account</wicket:message></h1>
+	<form wicket:id="UserAccountForm" id="UserAccountForm">
+		<h2 wicket:id="username">user name</h2>
+		<label class="myaccountl"><wicket:message key="lemail">email address</wicket:message></label>
+		<input type="email" wicket:id="emailaddr" id="emailaddr" autofocus maxlength="64" /><br>
+		<label class="myaccountl"><wicket:message key="loldPassword">current password</wicket:message></label>
+		<input type="password" wicket:id="currentpassword" id="currentpassword" maxlength="64" onfocus="starve()" /><br>
+		<label class="myaccountl"><wicket:message key="lnewPassword">new password</wicket:message></label>
+		<input type="password" wicket:id="newpassword" id="newpassword" maxlength="64" onfocus="starve()" /><br>
+		<label class="myaccountl"><wicket:message key="lnewcPassword">confirm password</wicket:message></label>
+		<input type="password" wicket:id="confirmpassword" id="confirmpassword" maxlength="64" onfocus="starve()" /><br>
+		<label class="myaccountl"><wicket:message key="lquestion" wicket:id="lquestion">Security Question:</wicket:message></label>	
+	
+		<input type="text" wicket:id="questiontf" id="questiontf" maxlength="64" onfocus="starve()" /><br/>
+		<label class="myaccountl"><wicket:message key="lanswer" wicket:id="lanswer">Security Answer:</wicket:message></label>	
+		<input type="text" wicket:id="answertf" id="answertf" maxlength="64" onfocus="starve()" /><br/>
+	
+		<input class="subbutton" type="submit" id="subform" value="Log in/se connecter" wicket:message="value:bsubmit" /><br>
+	</form>
+</wicket:extend>
+</html>

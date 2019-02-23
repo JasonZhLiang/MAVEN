@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<wicket:head>
+<script src="LCTableSizer.js"></script>
+</wicket:head> 
+<body>
+<wicket:extend>
+	
+		<div id="Create/Edit Exercises">
+			
+		<form wicket:id="HomeForm" id="HomeForm">
+		
+				<h2><label wicket:id="CreateorEdit"> </label> </h2>
+				<span wicket:id="titleupdated" id="titleupdated">text</span><br/>
+			
+				Exercise name:  <input type="text" wicket:id="exernametf" id="exernametf" size="25"/> 
+				<br/><br/>
+				Exercise type:  <select wicket:id="exertypeselect" id="exertypeselect">
+					<option id="exertypeoption"></option>
+				</select>
+				<br/><br/>
+				Comment:  <input type="text" wicket:id="commenttxt"/><br/><br/><br/>
+				<input wicket:id="copybutton" type="submit" value="Duplicate"/>
+				<input type="button" wicket:id="namesubmit" onSubmit="alert('hi');" id="namesubmit" value="Save Changes"/>
+		
+				<input type="submit"  wicket:id="addExercise" value="Add questions to exercise"/><br/><br/>
+									
+			</form>
+		</div> <!-- post -->
+		
+</wicket:extend>
+
+</body>
+</html>
